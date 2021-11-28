@@ -18,10 +18,6 @@ if(isset($_POST['ajout'])){
 if(isset($_POST['retour'])){
 	header('Location:http://localhost/PhpGitCM/adminGestion.php');
 }
-
-
-
-
 ?>
 
 
