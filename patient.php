@@ -11,6 +11,7 @@
 <?php
 require "secuConnexion.php";
 require "connect.php";
+
 if(isset($_POST['ajout'])){
 	header('Location:ajoutPatient.php');
 }
@@ -24,19 +25,17 @@ if(isset($_POST['suppr'])){
 ?>
 
 
-<body>
+<body class="p-3 mb-2 bg-info text-dark">
 	<h3 class="nomPop">Gestion patients</h3>
 	
 	<form action="" method="POST">
 	
 	<input type="submit" name="retour"  value="retour"/>
 	<input type="submit" name="ajout"  value="ajout"/>
-	<input type="submit" name="modif"  value="modifications"/>
-	<input type="submit" name="suppr"  value="suppression"/>
 	<table class="container">
   <thead  class="thead-light">
     <tr >
-      <th scope="col">#</th>
+      <th scope="col">id</th>
       <th scope="col">Nom</th>
       <th scope="col">Prénom</th>
       <th scope="col">Numéro de sécu</th>
@@ -64,11 +63,7 @@ if(isset($_POST['suppr'])){
 	
 	
 	
-	<?php
-		}
-		
-		
-  ?>
+	<?php  } ?>
   
 </table>
 
