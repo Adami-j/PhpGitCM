@@ -55,10 +55,8 @@ if(isset($_POST['suppr'])){
 		  <td><?php echo $exec['nom'];?></td>
 		  <td><?php echo $exec['prenom'];?></td>
 		  <td><?php echo $exec['numeroSecu'];?></td>
-		  <td>
-		  <a href="modifierPatient.php?id=<?php echo $exec['id_patient'];?>">modif</a>
-		  </td>
-			
+		  <td><a href="modifierPatient.php?id=<?php echo $exec['id_patient'];?>">modifier</a></td>
+		  <td><a href="supprPatient.php?id=<?php echo $exec['id_patient'];?>">supprimer</a></td>
 		</tr>
 			
 	  </tbody>

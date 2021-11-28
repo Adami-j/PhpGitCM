@@ -33,7 +33,10 @@
 		Téléphone                  :<input type="number" id="tel" name="tel" value="<?php echo $row['telephone']; ?>" ></br>
 		Numéro de sécurité sociale :<input type="text" id="numSecu" name="numSecu" value="<?php echo $row['numeroSecu']; ?>"></br>
 		
-		<input type="submit" id="envoi" name="envoi">
+		<input type="submit" id="envoi" name="envoi" value='valider'>
+		<input type="submit" id="retour" name="retour" value='annuler'>
+		
+		
 	<?php 
 			
 	if(isset($_POST['envoi'])){ 		
@@ -52,12 +55,16 @@
 					$telephone=$_POST['tel'];
 					$numSecu=$_POST['numSecu'];
 					$civilite=$_POST['selectCivilite'];
-					$requette= "UPDATE patient(numeroSecu,nom,prenom,telephone,adresse,ville,codePostal,dateNaissance,lieuNaissance,civilite) VALUES('$numSecu','$nom','$prenom','$telephone','$adresse','$ville','$codePostal','$dNaissance','$lieuNaissance','$civilite')";
+					$requette= "UPDATE patient SET numeroSecu ='$numSecu',nom='$nom',prenom='$prenom',telephone='$telephone',adresse='$adresse',ville='$ville',codePostal='$codePostal',dateNaissance='$dNaissance',lieuNaissance='$lieuNaissance',civilite='$civilite'";
 					$conn->exec($requette);
-				
+					
+					header('Location:patient.php');
 				
 				
 			}
+	}
+	if(isset($_POST['retour'])){
+		header('Location:patient.php');
 	}
 	
 		
