@@ -10,10 +10,10 @@
 require "secu/secuConnexion.php";
 
 if(isset($_POST['patient'])){
-	header('Location:patient.php');
+	header('Location:patient/patient.php');
 }
 if(isset($_POST['medecin'])){
-	header('Location:index.php');
+	header('Location:medecin/medecin.php');
 }
 if(isset($_POST['rdv'])){
 	header('Location:index.php');

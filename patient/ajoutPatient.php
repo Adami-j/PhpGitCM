@@ -3,7 +3,8 @@
 
 <?php
 
-require "connect.php";
+require "C:\UwAmp\www\PhpGitCM\secu/secuConnexion.php";
+require "C:\UwAmp\www\PhpGitCM\connect.php";
 	
 	
 if(isset($_POST['valider']) ){
@@ -31,7 +32,7 @@ if(isset($_POST['valider']) ){
 			$conn->exec($requette);
 			
 			echo "<meta http-equiv='refresh' content='0'>";
-			header("Location: patient.php");
+			header("Location: medecin.php");
 			
 			
 			}

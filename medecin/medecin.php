@@ -9,24 +9,24 @@
 </head>
 
 <?php
-require "secuConnexion.php";
-require "connect.php";
+require "C:\UwAmp\www\PhpGitCM\secu/secuConnexion.php";
+require "C:\UwAmp\www\PhpGitCM\connect.php";
 
 if(isset($_POST['ajout'])){
-	header('Location:ajoutPatient.php');
+	header('Location:ajoutMedecin.php');
 }
-if(isset($_POST['modif'])){
-	header('Location:modifPatient.php');
+if(isset($_POST['retour'])){
+	header('Location:http://localhost/PhpGitCM/adminGestion.php');
 }
-if(isset($_POST['suppr'])){
-	header('Location:supprPatient.php');
-}
+
+
+
 
 ?>
 
 
 <body class="p-3 mb-2 bg-info text-dark">
-	<h3 class="nomPop">Gestion patients</h3>
+	<h3 class="nomPop">Gestion des médecins</h3>
 	
 	<form action="" method="POST">
 	
@@ -36,26 +36,30 @@ if(isset($_POST['suppr'])){
   <thead  class="thead-light">
     <tr >
       <th scope="col">id</th>
+	  <th scope="col">civilité</th>
       <th scope="col">Nom</th>
       <th scope="col">Prénom</th>
-      <th scope="col">Numéro de sécu</th>
+      
     </tr>
   </thead>
   
   <?php 
-		$donnees=$conn->query("SELECT nom, prenom, numeroSecu, id_patient FROM patient");
+		
+		$donnees=$conn->query("SELECT nom, prenom, civilite, id_Medecin FROM medecin");
 		while ($exec = $donnees->fetch()){
 			
 	?>		
 	
 	<tbody >
 		<tr>
-			<th scope=row><?php echo $exec['id_patient'];?> </th>
+		  <th scope=row><?php echo $exec['id_Medecin'];?> </th>
+		  <td><?php echo $exec['civilite'];?></td>
 		  <td><?php echo $exec['nom'];?></td>
 		  <td><?php echo $exec['prenom'];?></td>
-		  <td><?php echo $exec['numeroSecu'];?></td>
-		  <td><a href="modifierPatient.php?id=<?php echo $exec['id_patient'];?>">modifier</a></td>
-		  <td><a href="supprPatient.php?id=<?php echo $exec['id_patient'];?>">supprimer</a></td>
+		  
+		  <td><a href="modifierMedecin.php?id=<?php echo $exec['id_Medecin'];?>">modifier</a></td>
+		  <td><a href="supprMedecin.php?id=<?php echo $exec['id_Medecin'];?>">supprimer</a></td>
+		   <td><a href="refMedecin.php?id=<?php echo $exec['id_Medecin'];?>">medecin référent </a></td>
 		</tr>
 			
 	  </tbody>

@@ -18,8 +18,7 @@
 		
 		$id=$_GET['id'];
 		$req = $conn->query("SELECT * FROM patient WHERE id_patient= $id " );
-			
-			$row=$req->fetch();
+		$row=$req->fetch();
 		?>
 	<form action=""  method="POST" >
 		Civilité                   :<input type="text" id="selectCivilite" name="selectCivilite" value="<?php echo $row['civilite']; ?>" ></br>
