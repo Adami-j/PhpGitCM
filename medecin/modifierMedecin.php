@@ -1,4 +1,4 @@
-<!doctype html>
+	<!doctype html>
 <html lang="fr">
 <head>
   <meta charset="utf-8">
@@ -13,8 +13,8 @@
 
 		<?php  
 		
-		require "C:\UwAmp\www\PhpGitCM\secu/secuConnexion.php";
-		require "C:\UwAmp\www\PhpGitCM\connect.php";
+	require "..\..\PhpGitCM\secu\secuConnexion.php";
+	require "..\..\PhpGitCM\connect.php";
 		
 		$id=$_GET['id'];
 		$req = $conn->query("SELECT nom, civilite, prenom FROM medecin WHERE id_Medecin= $id " );
