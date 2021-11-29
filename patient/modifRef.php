@@ -41,7 +41,7 @@
      
     </tr>
   </thead>
-	<?php$row=$req->fetch()?>
+	<?php$row=$req->fetch();?>
 	<tbody >
 		<tr>
 			<th scope=row><?php echo $row['id_Medecin'];?> </th>
@@ -49,10 +49,7 @@
 			  <td><?php echo $row['nom'];?></td>
 			  <td><?php echo $row['prenom'];?></td>
 		  
-		   <td> 
-		
-	<a href="modifRef.php/?idd=<?php echo $row['id_Medecin'];?>">mdo</a>
-		</td>
+		   <td>	<a href="modifRef.php/?idd=<?php echo $row['id_Medecin'];?>">mdo</a></td>
 		  </tr>
 	
 	  </tbody>
