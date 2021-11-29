@@ -6,8 +6,8 @@
   <link rel="stylesheet" href="style.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   <?php
-	require "C:\UwAmp\www\PhpGitCM\secu/secuConnexion.php";
-	require "C:\UwAmp\www\PhpGitCM\connect.php";
+	require "..\..\PhpGitCM\secu\secuConnexion.php";
+	require "..\..\PhpGitCM\connect.php";
 	$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 	$id=$_GET['id'];
 	
