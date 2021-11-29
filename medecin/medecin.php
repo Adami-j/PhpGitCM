@@ -55,7 +55,6 @@ if(isset($_POST['retour'])){
 		  
 		  <td><a href="modifierMedecin.php?id=<?php echo $exec['id_Medecin'];?>">modifier</a></td>
 		  <td><a href="supprMedecin.php?id=<?php echo $exec['id_Medecin'];?>">supprimer</a></td>
-		   <td><a href="refMedecin.php?id=<?php echo $exec['id_Medecin'];?>">medecin référent </a></td>
 		</tr>
 			
 	  </tbody>
