@@ -61,11 +61,12 @@
 		
 			if(isset($_GET['id'])and isset($_GET['idd'])){
 				if(!empty($_GET['id'])and !empty($_GET['idd']))
-					$idp=$_GET['id'];
-					$idm=$_GET['idd'];
-					$req = $conn->exec("INSERT INTO référent(id_patient,O_N,id_Medecin) VALUES('$idp','1','$idm');");
-					
-					header('Location: patient.php');
+					//condition pour O_N différent de 1
+						$idp=$_GET['id'];
+						$idm=$_GET['idd'];
+						$req = $conn->exec("INSERT INTO référent(id_patient,O_N,id_Medecin) VALUES('$idp','1','$idm');");
+						
+						header('Location: patient.php');
 			}
 		
 	?>
