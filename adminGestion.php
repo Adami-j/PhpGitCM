@@ -29,7 +29,7 @@ if(isset($_POST['rdv'])){
 	<input type="submit" name="patient"  value="Patient"/>
 	<input type="submit" name="medecin"  value="Medecin"/>
 	<input type="submit" name="rdv"  value="Rdv"/>
-	
+	<input type="submit" name="rdv"  value="Statistiques"/>
 	</form>
 	
 

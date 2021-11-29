@@ -13,8 +13,8 @@
 
 		<?php  
 		
-		require "secuConnexion.php";	
-		require "connect.php";
+		require "..\..\PhpGitCM\secu\secuConnexion.php";
+		require "..\..\PhpGitCM\connect.php";
 		
 		$id=$_GET['id'];
 		$req = $conn->query("SELECT * FROM patient WHERE id_patient= $id " );
@@ -54,7 +54,7 @@
 					$telephone=$_POST['tel'];
 					$numSecu=$_POST['numSecu'];
 					$civilite=$_POST['selectCivilite'];
-					$requette= "UPDATE patient SET numeroSecu ='$numSecu',nom='$nom',prenom='$prenom',telephone='$telephone',adresse='$adresse',ville='$ville',codePostal='$codePostal',dateNaissance='$dNaissance',lieuNaissance='$lieuNaissance',civilite='$civilite'";
+					$requette= "UPDATE patient SET numeroSecu ='$numSecu',nom='$nom',prenom='$prenom',telephone='$telephone',adresse='$adresse',ville='$ville',codePostal='$codePostal',dateNaissance='$dNaissance',lieuNaissance='$lieuNaissance',civilite='$civilite' WHERE id_patient= $id";
 					$conn->exec($requette);
 					
 					header('Location:patient.php');

@@ -9,8 +9,8 @@
 </head>
 
 <?php
-require "C:\UwAmp\www\PhpGitCM\secu/secuConnexion.php";
-require "C:\UwAmp\www\PhpGitCM\connect.php";
+require "..\..\PhpGitCM\secu\secuConnexion.php";
+require "..\..\PhpGitCM\connect.php";
 
 if(isset($_POST['ajout'])){
 	header('Location:ajoutPatient.php');
@@ -56,7 +56,7 @@ if(isset($_POST['retour'])){
 		  <td><?php echo $exec['numeroSecu'];?></td>
 		  <td><a href="modifierPatient.php?id=<?php echo $exec['id_patient'];?>">modifier</a></td>
 		  <td><a href="supprPatient.php?id=<?php echo $exec['id_patient'];?>">supprimer</a></td>
-		   <td><a href="refPatient.php?id=<?php echo $exec['id_patient'];?>">medecin référent </a></td>
+		   <td><a href="../../../PhpGitCM/patient/modifRef.php?id=<?php echo $exec['id_patient'];?>">medecin référent </a></td>
 		</tr>
 			
 	  </tbody>
