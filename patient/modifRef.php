@@ -16,8 +16,8 @@
 	</form>
 		<?php  
 		
-		require "C:\UwAmp\www\PhpGitCM\secu/secuConnexion.php";
-		require "C:\UwAmp\www\PhpGitCM\connect.php";
+	require "..\..\PhpGitCM\secu\secuConnexion.php";
+	require "..\..\PhpGitCM\connect.php";
 		
 		if (!isset($_SESSION['id'])){
 			$_SESSION['id'] =$_GET['id'];
@@ -41,7 +41,7 @@
      
     </tr>
   </thead>
-	<?php$row=$req->fetch();?>
+	<?php while($row=$req->fetch()){ ?>
 	<tbody >
 		<tr>
 			<th scope=row><?php echo $row['id_Medecin'];?> </th>
@@ -53,7 +53,17 @@
 		  </tr>
 	
 	  </tbody>
-	
+	<?php  } 
+		
+		if(isset($_SESSION['id'])and isset($_GET['idd'])){
+			$idp=$_SESSION['id'];
+			$idm=$_GET['idd'];
+			echo $idp."  ".$idm;
+			$req = $conn->query("INSERT INTO référent(id_patient,O_N,id_Medecin) VALUES('$idp','1','$idm')");
+			
+			header('Locate:patient.php');
+		}
+	?>
 
 	
 		
