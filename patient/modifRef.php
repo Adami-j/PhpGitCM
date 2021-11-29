@@ -8,28 +8,29 @@
 
 </head>
 
-<body class="p-3 mb-2 bg-info text-dark">		
-		
+<body >			
 	<form id="f1" method="POST">
 		<input type="submit" name="retour" value="retour">
 		
 	</form>
 		<?php  
 		
+		
 	require "..\..\PhpGitCM\secu\secuConnexion.php";
 	require "..\..\PhpGitCM\connect.php";
 		
-		if (!isset($_SESSION['id'])){
+		if(!isset($_SESSION['id'])) {
 			$_SESSION['id'] =$_GET['id'];
 		}
 		
+			
 	
 		
 		$req = $conn->query("SELECT nom, civilite, prenom, id_Medecin FROM medecin " );
 			
-		
-		
 		?>
+		
+		
 	    <table class="container">
 
 		<thead  class="thead-light">
@@ -55,14 +56,13 @@
 	  </tbody>
 	<?php  } 
 		
-		if(isset($_SESSION['id'])and isset($_GET['idd'])){
+			
 			$idp=$_SESSION['id'];
 			$idm=$_GET['idd'];
-			echo $idp."  ".$idm;
-			$req = $conn->query("INSERT INTO référent(id_patient,O_N,id_Medecin) VALUES('$idp','1','$idm')");
-			
-			header('Locate:patient.php');
-		}
+			$req = $conn->exec("INSERT INTO référent(id_patient,O_N,id_Medecin) VALUES('$idp','1','$idm');");
+			unset($_SESSION['id']);
+			header('Location: patient.php');
+		
 	?>
 
 	
