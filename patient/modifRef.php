@@ -53,7 +53,7 @@
 			  <td><?php echo $row['nom'];?></td>
 			  <td><?php echo $row['prenom'];?></td>
 		  
-		   <td>	<a href="modifRef.php/?idd=<?php echo $row['id_Medecin'];?>&?id=<?php $_GET['id'] ?>">mdo</a></td>
+		   <td>	<a href="modifRef.php?idd=<?php echo $row['id_Medecin'];?>&?id=<?php $_GET['id'] ?>">mdo</a></td>
 		  </tr>
 	
 	  </tbody>

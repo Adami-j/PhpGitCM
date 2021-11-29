@@ -14,9 +14,6 @@
 	$conn->exec($req);
 	header('Location:patient.php');
 	
-	
-
-	
 		
   ?>
 </head>
