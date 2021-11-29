@@ -65,6 +65,7 @@ if(isset($_POST['valider']) ){
 				Lieu naissance             :<input type="text" id="lNaissance" name="lNaissance"></br>
 				Téléphone                  :<input type="number" id="tel" name="tel" ></br>
 				Numéro de sécurité sociale :<input type="text" id="numSecu" name="numSecu" ></br>
+				<input type="file"  id="avatar" name="avatar" accept="image/png, image/jpeg"></br>
 				<input type="submit" id="valider" name="valider">
 			</form>
 			<a href="patient.php"><button id="retour">annuler</button></a>
