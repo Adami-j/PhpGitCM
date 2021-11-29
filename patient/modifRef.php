@@ -13,7 +13,7 @@
 		<input type="submit" name="retour" value="retour">
 		
 	</form>
-		<?php  
+		<?php 
 		
 			if(isset($_POST['retour'])){
 				header('Location: patient.php');
@@ -23,7 +23,7 @@
 	require "..\..\PhpGitCM\connect.php";
 		
 		if(!isset($_SESSION['id'])) {
-			$_SESSION['id'] =$_GET['id'];
+			$_SESSION['id'] = $_GET['id'];
 		}
 		
 			
@@ -53,7 +53,7 @@
 			  <td><?php echo $row['nom'];?></td>
 			  <td><?php echo $row['prenom'];?></td>
 		  
-		   <td>	<a href="modifRef.php?idd=<?php echo $row['id_Medecin'];?>&?id=<?php $_GET['id'] ?>">mdo</a></td>
+		   <td>	<a href="modifRef.php?idd= <?php echo $row['id_Medecin']; ?> & modifRef.php?id= <?php $_GET['id'] ?> ">mdo</a></td>
 		  </tr>
 	
 	  </tbody>
