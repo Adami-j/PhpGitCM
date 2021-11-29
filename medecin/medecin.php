@@ -9,14 +9,14 @@
 </head>
 
 <?php
-require "C:\UwAmp\www\PhpGitCM\secu/secuConnexion.php";
-require "C:\UwAmp\www\PhpGitCM\connect.php";
+	require "..\..\PhpGitCM\secu\secuConnexion.php";
+	require "..\..\PhpGitCM\connect.php";
 
 if(isset($_POST['ajout'])){
 	header('Location:ajoutMedecin.php');
 }
 if(isset($_POST['retour'])){
-	header('Location:http://localhost/PhpGitCM/adminGestion.php');
+	header('Location:..\..\PhpGitCM/adminGestion.php');
 }
 ?>
 

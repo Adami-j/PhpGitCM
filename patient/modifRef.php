@@ -41,7 +41,7 @@
      
     </tr>
   </thead>
-	<?php while($row=$req->fetch()){?>
+	<?php$row=$req->fetch()?>
 	<tbody >
 		<tr>
 			<th scope=row><?php echo $row['id_Medecin'];?> </th>
@@ -54,9 +54,9 @@
 	<a href="modifRef.php/?idd=<?php echo $row['id_Medecin'];?>">mdo</a>
 		</td>
 		  </tr>
-			
+	
 	  </tbody>
-	<?php}?>
+	
 
 	
 		
