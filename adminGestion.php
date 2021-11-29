@@ -16,7 +16,7 @@ if(isset($_POST['medecin'])){
 	header('Location:medecin/medecin.php');
 }
 if(isset($_POST['rdv'])){
-	header('Location:index.php');
+	header('Location:afficherRdv.php');
 }
 ?>
 

@@ -15,6 +15,9 @@
 	</form>
 		<?php  
 		
+			if(isset($_POST['retour'])){
+				header('Location: patient.php');
+			}
 		
 	require "..\..\PhpGitCM\secu\secuConnexion.php";
 	require "..\..\PhpGitCM\connect.php";
@@ -50,18 +53,20 @@
 			  <td><?php echo $row['nom'];?></td>
 			  <td><?php echo $row['prenom'];?></td>
 		  
-		   <td>	<a href="modifRef.php/?idd=<?php echo $row['id_Medecin'];?>">mdo</a></td>
+		   <td>	<a href="modifRef.php/?idd=<?php echo $row['id_Medecin'];?>&?id=<?php $_GET['id'] ?>">mdo</a></td>
 		  </tr>
 	
 	  </tbody>
 	<?php  } 
 		
-			
-			$idp=$_SESSION['id'];
-			$idm=$_GET['idd'];
-			$req = $conn->exec("INSERT INTO référent(id_patient,O_N,id_Medecin) VALUES('$idp','1','$idm');");
-			unset($_SESSION['id']);
-			header('Location: patient.php');
+			if(isset($_GET['id'])and isset($_GET['idd'])){
+				if(!empty($_GET['id'])and !empty($_GET['idd']))
+					$idp=$_GET['id'];
+					$idm=$_GET['idd'];
+					$req = $conn->exec("INSERT INTO référent(id_patient,O_N,id_Medecin) VALUES('$idp','1','$idm');");
+					
+					header('Location: patient.php');
+			}
 		
 	?>
 
