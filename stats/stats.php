@@ -15,6 +15,16 @@
     require "..\..\PhpGitCM\secu\secuConnexion.php";
     require "..\..\PhpGitCM\connect.php";
 
+
+    $idmed=$conn->query("SELECT id_Medecin FROM consulter");
+    while ($exec = $idmed->fetch()){
+        $dure=$conn->query("SELECT duree FROM consulter WHERE id_Medecin = $exec[id_Medecin]");
+        while ($exec2 = $dure->fetch()){
+            echo $exec2['duree'];
+            }
+        }
+
+
     ?>
 
 
