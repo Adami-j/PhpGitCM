@@ -18,13 +18,8 @@
         $req = $conn->query("SELECT nom, civilite, prenom, id_Medecin FROM medecin; " );
 
         ?>
-           <td>    <form id="f1" method="POST">
-                <select name="medecin"/>
-                <?php while($row=$req->fetch()){ ?>
-                        <option value="<?php echo $row['id_Medecin']?>"><?php echo $row['nom']?></option>
-                <?php }
-				$req->closeCursor();?>
-                </select>
+           <td>   <form id="f1" method="POST">
+                
                 <input type="submit" name="validerIdMedecin" value="Valider"/>
                 </form>
             </td>

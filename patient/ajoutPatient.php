@@ -24,10 +24,7 @@ if(isset($_POST['valider']) ){
 			
 		
 		
-		if( !empty($_POST['selectCivilite']) and !empty($_POST['nom'])and !empty($_POST['prenom']) 
-			and !empty($_POST['adresse']) and !empty($_POST['dNaissance']) and !empty($_POST['ville'])
-			and !empty($_POST['cp']) and !empty($_POST['dNaissance']) and !empty($_POST['lNaissance']) and !empty($_POST['tel'])){
-	
+		
 			$requette= "INSERT INTO patient(numeroSecu,nom,prenom,telephone,adresse,ville,codePostal,dateNaissance,lieuNaissance,civilite) VALUES('$numSecu','$nom','$prenom','$telephone','$adresse','$ville','$codePostal','$dNaissance','$lieuNaissance','$civilite');";
 			$conn->exec($requette);
 			
@@ -35,7 +32,7 @@ if(isset($_POST['valider']) ){
 			header("Location: patient.php");
 			
 			
-			}
+			
 		}
 }
 		?>

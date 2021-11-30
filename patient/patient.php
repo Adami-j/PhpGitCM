@@ -44,9 +44,9 @@ if(isset($_POST['retour'])){
   </thead>
   
   <?php 
-		$req = $conn->query("SELECT nom, civilite, prenom, id_Medecin FROM medecin; " );
+		
 		$donnees=$conn->query("SELECT nom, prenom, numeroSecu, id_patient FROM patient");
-		while ($exec = $donnees->fetch()and $row=$req->fetch() ){
+		while ($exec = $donnees->fetch() ){
 			
 	?>		
 	
