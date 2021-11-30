@@ -1,4 +1,6 @@
 <?php
+
+require "connect.php";
 if(!isset($_SESSION['login']) AND !isset($_SESSION['password'])){
 	session_start();
 	if(isset($_POST['envoyer'])){
