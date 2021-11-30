@@ -21,15 +21,3 @@ if(!isset($_SESSION['login']) AND !isset($_SESSION['password'])){
 	}
 }
 }?>
-
-
-
-<td><a href="modifierRdv.php?id=<?php echo $exec[''];?>">modifier</a></td>
-		  <td><a href="supprRdv.php?id=<?php echo $exec[''];?>">supprimer</a></td>
-		   <td><a href="http://localhost/PhpGitCM/patient/modifRef.php?id=<?php echo $exec['id_patient'];?>">medecin référent </a></td>
-		   
-		   <?php
-		$sql= "SELECT NumeroSecu, dateRdv, HeureRdv, id_Medecin from consulter";
-		$req = $conn ->query($sql);
-		while ($row= $req ->fetch()){
-		?>	

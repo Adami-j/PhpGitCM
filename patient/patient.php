@@ -39,12 +39,14 @@ if(isset($_POST['retour'])){
       <th scope="col">Nom</th>
       <th scope="col">Prénom</th>
       <th scope="col">Numéro de sécu</th>
+	  <th scope="col">Medecin Référent</th>
     </tr>
   </thead>
   
   <?php 
+		$req = $conn->query("SELECT nom, civilite, prenom, id_Medecin FROM medecin; " );
 		$donnees=$conn->query("SELECT nom, prenom, numeroSecu, id_patient FROM patient");
-		while ($exec = $donnees->fetch()){
+		while ($exec = $donnees->fetch()and $row=$req->fetch() ){
 			
 	?>		
 	
@@ -56,7 +58,13 @@ if(isset($_POST['retour'])){
 		  <td><?php echo $exec['numeroSecu'];?></td>
 		  <td><a href="modifierPatient.php?id=<?php echo $exec['id_patient'];?>">modifier</a></td>
 		  <td><a href="supprPatient.php?id=<?php echo $exec['id_patient'];?>">supprimer</a></td>
-		   <td><a href="http://localhost/PhpGitCM/patient/modifRef.php?id=<?php echo $exec['id_patient'];?>">medecin référent </a></td>
+		   <td><select name="medecin"/>
+                <?php while($row=$req->fetch()){ ?>
+                        <option value="<?php echo $row['id_Medecin']?>"><?php echo $row['nom']?></option>
+                <?php }
+				$req->closeCursor();?>
+                </select></td>
+			<?php }?>
 		</tr>
 			
 	  </tbody>
