@@ -45,7 +45,7 @@ if(isset($_POST['retour'])){
   
   <?php 
 		
-		$donnees=$conn->query("SELECT nom, prenom, numeroSecu, id_patient FROM patient");
+		$donnees=$conn->query("SELECT nom, prenom, numeroSecu, id_patient, dateNaissance FROM patient");
 		while ($exec = $donnees->fetch() ){
 			
 	?>		
@@ -56,6 +56,7 @@ if(isset($_POST['retour'])){
 		  <td><?php echo $exec['nom'];?></td>
 		  <td><?php echo $exec['prenom'];?></td>
 		  <td><?php echo $exec['numeroSecu'];?></td>
+		   <td><?php echo $exec['dateNaissance'];?></td>
 		  <td><a href="modifierPatient.php?id=<?php echo $exec['id_patient'];?>">modifier</a></td>
 		  <td><a href="supprPatient.php?id=<?php echo $exec['id_patient'];?>">supprimer</a></td>
 
