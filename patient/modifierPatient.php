@@ -19,6 +19,7 @@
 		$id=$_GET['id'];
 		$req = $conn->query("SELECT * FROM patient WHERE id_patient= $id " );
 		$row=$req->fetch();
+		$req = $conn->query("SELECT nom, civilite, prenom, id_Medecin FROM medecin; " );
 		?>
 	<form action=""  method="POST" >
 		Civilité                   :<input type="text" id="selectCivilite" name="selectCivilite" value="<?php echo $row['civilite']; ?>" ></br>
@@ -31,7 +32,12 @@
 		Lieu naissance             :<input type="text" id="lNaissance" name="lNaissance" value="<?php echo $row['lieuNaissance']; ?>"></br>
 		Téléphone                  :<input type="number" id="tel" name="tel" value="<?php echo $row['telephone']; ?>" ></br>
 		Numéro de sécurité sociale :<input type="text" id="numSecu" name="numSecu" value="<?php echo $row['numeroSecu']; ?>"></br>
-		
+		Médecin référent           :<select name="medecin"/> <option value="0">Pas de médecin référent</option>
+                <?php while($row=$req->fetch()){ ?>
+                        <option value="<?php echo $row['id_Medecin']?>"><?php echo $row['nom']?></option>
+                <?php }
+				$req->closeCursor();?>
+                </select></br>
 		<input type="submit" id="envoi" name="envoi" value='valider'>
 		<input type="submit" id="retour" name="retour" value='annuler'>
 		
@@ -57,7 +63,7 @@
 					$requette= "UPDATE patient SET numeroSecu ='$numSecu',nom='$nom',prenom='$prenom',telephone='$telephone',adresse='$adresse',ville='$ville',codePostal='$codePostal',dateNaissance='$dNaissance',lieuNaissance='$lieuNaissance',civilite='$civilite' WHERE id_patient= $id";
 					$conn->exec($requette);
 					
-					header('Location:patient.php');
+					//header('Location:patient.php');
 				
 				
 			}
@@ -66,8 +72,13 @@
 		header('Location:patient.php');
 	}
 	
+	if(isset($_POST['envoi'])){
+				$reqM="INSERT INTO référent(id_patient,O_N, Id_Medecin) VALUES ('".$_GET['id']."','1','".$_POST['medecin']."');";
+				$conn->exec($reqM);
+				echo var_dump($reqM);
+	}
 		
-		
+			
 		
 		?>
 	</form>

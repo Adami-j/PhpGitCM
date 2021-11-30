@@ -58,13 +58,8 @@ if(isset($_POST['retour'])){
 		  <td><?php echo $exec['numeroSecu'];?></td>
 		  <td><a href="modifierPatient.php?id=<?php echo $exec['id_patient'];?>">modifier</a></td>
 		  <td><a href="supprPatient.php?id=<?php echo $exec['id_patient'];?>">supprimer</a></td>
-		   <td><select name="medecin"/>
-                <?php while($row=$req->fetch()){ ?>
-                        <option value="<?php echo $row['id_Medecin']?>"><?php echo $row['nom']?></option>
-                <?php }
-				$req->closeCursor();?>
-                </select></td>
-			<?php }?>
+
+			   <?php }?>
 		</tr>
 			
 	  </tbody>
@@ -72,7 +67,7 @@ if(isset($_POST['retour'])){
 	
 	
 	
-	<?php  }?>
+
   
 </table>
 
