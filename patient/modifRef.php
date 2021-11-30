@@ -8,76 +8,59 @@
 
 </head>
 
-<body >			
-	<form id="f1" method="POST">
-		<input type="submit" name="retour" value="retour">
-		
-	</form>
-		<?php 
-		
-			if(isset($_POST['retour'])){
-				header('Location: patient.php');
-			}
-		
-	require "..\..\PhpGitCM\secu\secuConnexion.php";
-	require "..\..\PhpGitCM\connect.php";
-		
-		if(!isset($_SESSION['id'])) {
-			$_SESSION['id'] = $_GET['id'];
-		}
-		
-			
-	
-		
-		$req = $conn->query("SELECT nom, civilite, prenom, id_Medecin FROM medecin " );
-			
-		?>
-		
-		
-	    <table class="container">
+<body >
 
-		<thead  class="thead-light">
-    <tr >
-	  <th scope="col">id</th>
-      <th scope="col">civilité</th>
-      <th scope="col">Nom</th>
-      <th scope="col">Prénom</th>
-     
-    </tr>
-  </thead>
-	<?php while($row=$req->fetch()){ ?>
-	<tbody >
-		<tr>
-			<th scope=row><?php echo $row['id_Medecin'];?> </th>
-			<td><?php echo $row['civilite'];?></td>
-			  <td><?php echo $row['nom'];?></td>
-			  <td><?php echo $row['prenom'];?></td>
-		  
-		   <td>	<a href="modifRef.php?idd= <?php echo $row['id_Medecin']; ?> & modifRef.php?id= <?php $_GET['id'] ?> ">mdo</a></td>
-		  </tr>
-	
-	  </tbody>
-	<?php  } 
-		
-			if(isset($_GET['id'])and isset($_GET['idd'])){
-				if(!empty($_GET['id'])and !empty($_GET['idd']))
-					//condition pour O_N différent de 1
-						$idp=$_GET['id'];
-						$idm=$_GET['idd'];
-						$req = $conn->exec("INSERT INTO référent(id_patient,O_N,id_Medecin) VALUES('$idp','1','$idm');");
-						
-						header('Location: patient.php');
-			}
-		
-	?>
+        <?php
 
-	
-		
-		
-		
-		
-		
-	
+
+
+    require "..\..\PhpGitCM\secu\secuConnexion.php";
+    require "..\..\PhpGitCM\connect.php";
+
+        $req = $conn->query("SELECT nom, civilite, prenom, id_Medecin FROM medecin " );
+
+        ?>
+           <td>    <form id="f1" method="POST">
+                <select name="medecin"/>
+                <?php while($row=$req->fetch()){ ?>
+                        <option value="<?php echo $row['id_Medecin']?>"><?php echo $row['nom']?></option>
+                <?php }?>
+                </select>
+                <input type="submit" name="validerIdMedecin" value="Valider"/>>
+                </form>
+            </td>
+          </tr>
+
+      </tbody>
+    <?php    if(isset($_POST['validerIdMedecin'])){
+                if(isset($_POST['medecin'])and isset($_GET['id'])){
+                    if(!empty($_POST['validerIdMedecin'])and !empty($_GET['id'])){
+
+                            $idp=$_GET['id'];
+                            $idm=$_POST['medecin'];
+							
+							$sql="INSERT INTO référent (id_patient, O_N, Id_Medecin) VALUES('$idp','1','$idm');";
+                            
+							try{
+								
+								$conn->exec($sql);
+							}catch(PDOException $e){
+								echo $e;
+							}
+							$sqlV= ";";
+							if()
+							
+                    }
+                }
+            }
+    ?>
+
+
+
+
+
+
+
+
 </body>
 </html>
-

@@ -8,51 +8,48 @@
 
 </head>
 
-<body >			
-	
-		<?php  
-		
-			
-		
-	require "..\..\PhpGitCM\secu\secuConnexion.php";
-	require "..\..\PhpGitCM\connect.php";
-				
-		$req = $conn->query("SELECT nom, civilite, prenom, id_Medecin FROM medecin " );
-			
-		?>
-		   <td>	<form id="f1" method="POST">
-				<select name="medecin"/>
-				<?php while($row=$req->fetch()){ ?>
-						<option value="<?php echo $row['id_Medecin']?>"><?php echo $row['nom']?></option>
-				<?php }?>
-				</select>
-				<input type="submit" name="validerIdMedecin" value="Valider"/>>
-				</form>
-			</td>
-		  </tr>
-	
-	  </tbody>
-	<?php	if(isset($_POST['validerIdMedecin'])){
-				if(isset($_POST['medecin'])and isset($_GET['id'])){
-					if(!empty($_POST['validerIdMedecin'])and !empty($_GET['id'])){
-						
-							$idp=$_GET['id'];
-							$idm=$_POST['medecin'];
-							$sql="INSERT INTO référent (id_patient,O_N,id_Medecin) VALUES('$idp',1,'$idm');"
-							
-						
-					
-				}
-			}	
-	?>
+<body >
 
-	
-		
-		
-		
-		
-		
-	
+        <?php
+
+
+
+    require "..\..\PhpGitCM\secu\secuConnexion.php";
+    require "..\..\PhpGitCM\connect.php";
+
+        $req = $conn->query("SELECT nom, civilite, prenom, id_Medecin FROM medecin " );
+
+        ?>
+           <td>    <form id="f1" method="POST">
+                <select name="medecin"/>
+                <?php while($row=$req->fetch()){ ?>
+                        <option value="<?php echo $row['id_Medecin']?>"><?php echo $row['nom']?></option>
+                <?php }?>
+                </select>
+                <input type="submit" name="validerIdMedecin" value="Valider"/>>
+                </form>
+            </td>
+          </tr>
+
+      </tbody>
+    <?php    if(isset($_POST['validerIdMedecin'])){
+                if(isset($_POST['medecin'])and isset($_GET['id'])){
+                    if(!empty($_POST['validerIdMedecin'])and !empty($_GET['id'])){
+
+                            $idp=$_GET['id'];
+                            $idm=$_POST['medecin'];
+                            $sql="INSERT INTO référent (id_patient,O_N,id_Medecin) VALUES('$idp',1,'$idm')";
+                    }
+                }
+            }
+    ?>
+
+
+
+
+
+
+
+
 </body>
 </html>
-
