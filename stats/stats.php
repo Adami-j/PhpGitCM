@@ -32,18 +32,20 @@
                     $temps-=60;
                     $heure+=1;
                 }
-                return $heure . " heure(s) et " . $temps . " minutes. ";
+                return $heure . " heure(s) et " . $temps . " minutes ";
             }
 
 
     $idmed=$conn->query("SELECT id_Medecin FROM consulter GROUP BY id_Medecin");
     while ($exec = $idmed->fetch()){
         $dure=$conn->query("SELECT duree FROM consulter WHERE id_Medecin = $exec[id_Medecin]");
+        $med=$conn->query("SELECT nom, prenom FROM medecin WHERE id_Medecin = $exec[id_Medecin]");
+        $infomed = $med->fetch();
         $total = 0;
         while ($exec2 = $dure->fetch()){
             $total += temps_en_minutes($exec2['duree']);
             }
-        echo 'le total est de ' . nombre_heure($total);
+        echo 'La durée totale des consultations est de ' . nombre_heure($total) . "pour le docteur " . $infomed['prenom'] . " " . $infomed['nom'] . ". ";
         }
 
 
