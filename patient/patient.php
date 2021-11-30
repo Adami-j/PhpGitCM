@@ -64,7 +64,7 @@ if(isset($_POST['retour'])){
 	
 	
 	
-	<?php  } ?>
+	<?php  }?>
   
 </table>
 

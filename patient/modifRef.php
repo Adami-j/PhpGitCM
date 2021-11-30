@@ -13,10 +13,10 @@
         <?php
 
 
-
+	
     require "..\..\PhpGitCM\secu\secuConnexion.php";
     require "..\..\PhpGitCM\connect.php";
-
+			
         $req = $conn->query("SELECT nom, civilite, prenom, id_Medecin FROM medecin " );
 
         ?>
@@ -47,8 +47,7 @@
 							}catch(PDOException $e){
 								echo $e;
 							}
-							$sqlV= ";";
-							if()
+							
 							
                     }
                 }
