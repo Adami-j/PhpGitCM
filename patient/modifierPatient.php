@@ -62,11 +62,11 @@
 					$civilite=$_POST['selectCivilite'];
 					$requette= "UPDATE patient SET numeroSecu ='$numSecu',nom='$nom',prenom='$prenom',telephone='$telephone',adresse='$adresse',ville='$ville',codePostal='$codePostal',dateNaissance='$dNaissance',lieuNaissance='$lieuNaissance',civilite='$civilite' WHERE id_patient= $id";
 					$conn->exec($requette);
-					$reqM="INSERT INTO référent(id_patient,O_N, Id_Medecin) VALUES ('".$_GET['id']."','1','".$_POST['medecin']."');";
-					$conn->exec($reqM);
-					echo var_dump($reqM);
 					
-					//header('Location:patient.php');
+					$idm=$row['id_Medecin'];
+					$test =$conn->prepare("INSERT INTO référent(id_patient,O_N, Id_Medecin) VALUES (?,?,?);");
+					$test->execute('48', '1' , '11');
+					header('Location:patient.php');
 				
 				
 			}
