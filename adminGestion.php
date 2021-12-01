@@ -16,7 +16,11 @@ if(isset($_POST['medecin'])){
 	header('Location:medecin/medecin.php');
 }
 if(isset($_POST['rdv'])){
-	header('Location:afficherRdv.php');
+	header('Location: rdv/afficherRdv.php');
+}
+
+if(isset($_POST['stat'])){
+	header('Location: stats/stats.php');
 }
 ?>
 
@@ -29,7 +33,7 @@ if(isset($_POST['rdv'])){
 	<input type="submit" name="patient"  value="Patient"/>
 	<input type="submit" name="medecin"  value="Medecin"/>
 	<input type="submit" name="rdv"  value="Rdv"/>
-	<input type="submit" name="rdv"  value="Statistiques"/>
+	<input type="submit" name="stat"  value="Statistiques"/>
 	</form>
 	
 

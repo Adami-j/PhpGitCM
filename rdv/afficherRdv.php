@@ -1,14 +1,14 @@
 <?php
 
-require("connect.php");
-require("secuConnexion.php");
+require "..\..\PhpGitCM\secu\secuConnexion.php";
+    require "..\..\PhpGitCM\connect.php";
 
 if(isset($_POST['retour'])){
-	header("Location: adminGestion.php");
+	header("Location: ..\..\PhpGitCM\adminGestion.php");
 }
 
 if(isset($_POST['ajout'])){
-	header("Location: adminGestion.php");
+	header("Location: ajouterRdv.php");
 }
 ?>
 
@@ -46,7 +46,7 @@ if(isset($_POST['ajout'])){
     </tr>
   </thead>
    <?php
-		$sql= "SELECT id_patient, dateRdv, HeureRdv, id_Medecin, duree from consulter";
+		$sql= "SELECT id_patient, dateRdv, HeureRdv, id_Medecin, duree from consulter ORDER BY dateRdv DESC;";
 		$req = $conn ->query($sql);
 		while ($row= $req ->fetch()){
 		?>	
@@ -57,8 +57,8 @@ if(isset($_POST['ajout'])){
             <td><?php echo $row['HeureRdv'];?></td>
 			<td><?php echo $row['id_Medecin'];?></td>
 			<td><?php echo $row['duree'];?></td>
-			<td><a href="modifierRdv.php?id=<?php echo $row['dateRdv'];?>">modifier</a></td>
-		  <td><a href="supprRdv.php?id=<?php echo $row['dateRdv'];?>">supprimer</a></td>
+			<td><a href="modifierRdv.php?dateRdv=<?php echo $row['dateRdv'];?>&amp;idp=<?php echo $row['id_patient'];?>&amp;heureRdv=<?php echo $row['HeureRdv'];?>">modifier</a></td>
+		  <td><a href="supprRdv.php?dateRdv=<?php echo $row['dateRdv'];?>&amp;idp=<?php echo $row['id_patient'];?>&amp;heureRdv=<?php echo $row['HeureRdv'];?>">supprimer</a></td>
 		   
 		   
           </tr>
