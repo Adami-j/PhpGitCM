@@ -4,10 +4,17 @@
   <meta charset="utf-8">
 	<title class="titrePage">Connexion au service</title>
 	<link rel="stylesheet" href="style.css">
+	
+	
 </head>
 <?php
 
 require "secu/secuConnexion.php";
+echo "Bonjour ".$_SESSION['login']." il est actuellement ";
+date_default_timezone_set('EUROPE/Paris');
+$date=date("H:i");
+	echo $date;
+
 
 if(isset($_POST['patient'])){
 	header('Location:patient/patient.php');
