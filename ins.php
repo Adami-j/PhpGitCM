@@ -12,8 +12,9 @@ $idm=$row2['id_Medecin'];
 $n=1;
 
 $req=$conn->exec("INSERT INTO référent(id_patient,O_N, Id_Medecin) VALUES ('$idp','$n','$idm');");
-echo var_dump("INSERT INTO référent(id_patient,O_N, Id_Medecin) VALUES ('$idp',1,'$idm')");
-
+$sql="INSERT INTO référent(id_patient,O_N, Id_Medecin) VALUES ('35','oui','11')";
+echo var_dump("INSERT INTO référent(id_patient,O_N, Id_Medecin) VALUES ('$idp','oui','$idm')");
+$conn->exec($sql);
 if($req==true){
 	echo "ok";
 }else{

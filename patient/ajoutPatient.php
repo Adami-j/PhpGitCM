@@ -57,7 +57,7 @@ if(isset($_POST['valider']) ){
 			<form action="" method="POST" >
 				Civilité                   :</br><select name="selectCivilite"/> 
 											<option value="Monsieur">Monsieur</option>
-											<option value="Monsieur">Madame</option></select></br>
+											<option value="Madame">Madame</option></select></br>
 				Nom                        :<input type="text" id="nom" name="nom" ></br>
 				Prénom                     :<input type="text" id="prenom" name="prenom" ></br>
 				Adresse                    :<input type="text" id="adresse" name="adresse" ></br>

@@ -22,9 +22,15 @@
 		$req = $conn->query("SELECT nom, civilite, prenom, id_Medecin FROM medecin; " );
 		?>
 	<form action=""  method="POST" >
-		Civilité                   :</br></br><select name="selectCivilite"/> 
-											<option value="<?php echo $row['civilite']; ?>"><?php echo $row['civilite']; ?></option>
-											<option value="<?php echo $row['civilite']; ?>"><?php echo $row['civilite']; ?></option>
+		Civilité                   :</br><select name="selectCivilite"/> 
+										<?php if($row['civilite']=='Monsieur'){
+												echo "<option value='Monsieur'>Monsieur</option> 
+												<option value='Madame'>Madame</option></select></br>";
+										}else{
+											echo "<option value='Madame'>Madame</option> 
+												<option value='Monsieur'>Monsieur</option></select></br>";
+										}
+										?>
 											</select></br>
 		Nom                        :<input type="text" id="nom" name="nom" value="<?php echo $row['nom']; ?>" ></br>
 		Prénom                     :<input type="text" id="prenom" name="prenom"  value="<?php echo $row['prenom']; ?>"></br>

@@ -22,7 +22,16 @@
 		$row=$req->fetch();
 		?>
 	<form action=""  method="POST" >
-		Civilité                   :<input type="text" id="selectCivilite" name="selectCivilite" value="<?php echo $row['civilite']; ?>" ></br>
+		Civilité                   :</br><select name="selectCivilite"/> 
+										<?php if($row['civilite']=='Monsieur'){
+												echo "<option value='Monsieur'>Monsieur</option> 
+												<option value='Madame'>Madame</option></select></br>";
+										}else{
+											echo "<option value='Madame'>Madame</option> 
+												<option value='Monsieur'>Monsieur</option></select></br>";
+										}
+										?>
+											
 		Nom                        :<input type="text" id="nom" name="nom" value="<?php echo $row['nom']; ?>" ></br>
 		Prénom                     :<input type="text" id="prenom" name="prenom"  value="<?php echo $row['prenom']; ?>"></br>
 		

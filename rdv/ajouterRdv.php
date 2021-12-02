@@ -10,15 +10,17 @@
     require "..\..\PhpGitCM\connect.php";
  
 ?>
-
-</head>
-<body>
-	<?php 
-		
-		
-	  $sql="INSERT INTO `consulter`(`id_patient`, `dateRdv`, `heureRdv`, `Id_Medecin`, `duree`) VALUES ('36','2021-12-17','16:00','11','');";
+<?php 
+	  $sql="INSERT INTO `consulter`(`id_patient`, `dateRdv`, `heureRdv`, `Id_Medecin`, `duree`) VALUES ('2','2021-12-17','16:00','2','');";
 	  $conn->exec($sql);
 	  ?>
+
+</head>
+<body><form method="POST">
+	
+	  <select>
+		<option></option>
+	  <select>
 	</form>
 </body>
 </html>

@@ -9,11 +9,15 @@
 	require "..\..\PhpGitCM\secu\secuConnexion.php";
 	require "..\..\PhpGitCM\connect.php";
 	$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-	$id=$_GET['id'];
 	
-	$req = "DELETE FROM medecin WHERE id_Medecin='$id'";
-	$conn->exec($req);
-	header('Location:medecin.php');
+	$id=$_GET['id']; $sql="SELECT COUNT(*) as q FROM medecin WHERE id_Medecin='$id';";
+	$res=$conn->query($sql);
+	$resu=$res->fetch();
+	if($resu['q']==1){
+		$req = "DELETE FROM medecin WHERE id_Medecin='$id'";
+		$conn->exec($req);
+		header('Location:medecin.php');
+	}
   ?>
 </head>
 	<body>

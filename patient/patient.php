@@ -36,29 +36,31 @@ if(isset($_POST['retour'])){
   <thead  class="thead-light">
     <tr >
       <th scope="col">id</th>
+	  <th scope="col">Civilité</th>
       <th scope="col">Nom</th>
       <th scope="col">Prénom</th>
       <th scope="col">Numéro de sécu</th>
-	  <th scope="col">Medecin Référent</th>
+	 
     </tr>
   </thead>
   
   <?php 
 		
-		$donnees=$conn->query("SELECT nom, prenom, numeroSecu, id_patient, dateNaissance FROM patient");
+		$donnees=$conn->query("SELECT civilite, nom, prenom, numeroSecu, id_patient FROM patient");
 		while ($exec = $donnees->fetch() ){
 			
 	?>		
 	
 	<tbody >
 		<tr>
-			<th scope=row><?php echo $exec['id_patient'];?> </th>
+		<th scope=row><?php echo $exec['id_patient'];?> </th>
+		  <td><?php echo $exec['civilite'];?></td>
 		  <td><?php echo $exec['nom'];?></td>
 		  <td><?php echo $exec['prenom'];?></td>
 		  <td><?php echo $exec['numeroSecu'];?></td>
-		   <td><?php echo $exec['dateNaissance'];?></td>
 		  <td><a href="modifierPatient.php?id=<?php echo $exec['id_patient'];?>">modifier</a></td>
 		  <td><a href="supprPatient.php?id=<?php echo $exec['id_patient'];?>">supprimer</a></td>
+		  <td><a href="mdrf.php?id=<?php echo $exec['id_patient'];?>">modifref</a></td>
 
 			   <?php }?>
 		</tr>

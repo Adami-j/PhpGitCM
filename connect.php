@@ -2,7 +2,7 @@
 <?php
 	
 		$host = 'localhost';
-		$dbname = 'cabinet_medical';
+		$dbname = 'cabinet_medical1';
 		$username = 'root';
 		$password = 'root';
 	 
