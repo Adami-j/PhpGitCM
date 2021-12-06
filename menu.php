@@ -10,8 +10,16 @@
 </head>
 
 
+<body>
 
-<script type="text/javascript" src="js/jquery-1.12.3.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<nav class="nav bg-light justify-content-center">
+	<a id="#"class="nav-link text-dark">Patient</a>
+	<a id="#"class="nav-link text-dark">Medecin</a>
+	<a id="#"class="nav-link text-dark">Rdv</a>
+	<a id="#"class="nav-link text-dark">statistiques</a>
+	
+	<section class="acceuil bg-dark d-flex w-100 h-100 flex-column justigy-content-center align-item-center"></section>
+
+</nav>
 </body>
 </html>
