@@ -27,28 +27,29 @@ require("recUser.php");
 
 </style>
 
-	<div class="container ">
+	<div class="container text-center">
 		<h3  id="nomPop" class="titre">Connexion</h3>
 		<form action="" method="POST" >
-		
-		<div>
+		</br>
+		<div  class="form-group">
 		<input type="text" name="login" value="" placeholder="Login" class=".flex-item"/>
-		</div>
+		</div></br>
 		
-		<div>
-			<input type="password" name="password" value="" placeholder="password" class=".flex-item"/>
+		<div class="form-group">
+			<input type="password" name="password" value="" placeholder="password" class=".flex-item"  />
 			
-		</div>
-		<div>
+		</div></br>
+		<div >
 		<input type="submit" name="envoyer"  value="Se connecter" class=".flex-item"/>
-		</div>
+            <input type="submit" name="nouveauC"  value="S'inscrire" class=".flex-item"/>
+		</div></br>
 		</form>
 		<?php 
-			if(!empty($errorMessage)){
-				echo $errorMessage.", veuillez recommencer";	
-			}	
+			if(!empty($errorMessage)) {
+                echo $errorMessage . ", veuillez recommencer";
+            }
 		?>
 	</div>
-
+ 
 </body>
 </html>
