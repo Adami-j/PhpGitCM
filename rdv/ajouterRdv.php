@@ -10,14 +10,20 @@
     require "..\..\PhpGitCM\connect.php";
  
 ?>
+
+
 <?php 
+
+
+
 	  $sql="INSERT INTO `consulter`(`id_patient`, `dateRdv`, `heureRdv`, `Id_Medecin`, `duree`) VALUES ('2','2021-12-17','16:00','2','');";
 	  $conn->exec($sql);
 	  ?>
 
 </head>
 <body><form method="POST">
-	
+	<input type="date" id="start" name="trip-start" value= min="2018-01-01" max="2018-12-31">
+>
 	  <select>
 		<option></option>
 	  <select>

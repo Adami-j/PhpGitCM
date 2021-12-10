@@ -12,12 +12,13 @@
 
 <body>
 
-<nav class="nav bg-light justify-content-center">
+<nav>
+    <ul class="nav justify-content-end bg-black">
 	<a id="#"class="nav-link text-dark">Patient</a>
 	<a id="#"class="nav-link text-dark">Medecin</a>
 	<a id="#"class="nav-link text-dark">Rdv</a>
 	<a id="#"class="nav-link text-dark">statistiques</a>
-	
+    </ul>
 	<section class="acceuil bg-dark d-flex w-100 h-100 flex-column justigy-content-center align-item-center"></section>
 
 </nav>

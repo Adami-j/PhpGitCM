@@ -50,6 +50,5 @@ require("recUser.php");
             }
 		?>
 	</div>
- 
 </body>
 </html>
