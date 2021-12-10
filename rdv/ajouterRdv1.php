@@ -11,14 +11,17 @@
 	
 	date_default_timezone_set('Europe/Paris');
 
-    if(isset($_POST['valider']) and isset($_POST['id_Medecin']) and  isset($_POST['id_patient']) and  isset($_POST['drdv']) and  isset($_POST['horaire'])){
-        $sql="INSERT INTO `consulter`(`id_patient`, `dateRdv`, `heureRdv`, `Id_Medecin`, `duree`) VALUES ()";
-        $idM=$_POST['id_Medecin'];
-        $idP=$_POST['id_patient'];
-        $drdv=$_POST['drdv'];
-        $hrdv=$_POST['horaire'];
-        $conn->exec($sql);
-    }
+if(isset($_POST['valider'])) {
+   # and isset($_POST['id_Medecin']) and  isset($_POST['id_patient']) and  isset($_POST['drdv']) and  isset($_POST['horaire'])
+    $idM = $_POST['id_Medecin'];
+    $idP = $_POST['pat'];
+    $drdv = $_POST['drdv'];
+    $hrdv = $_POST['horaire'];
+    $duree = $_POST['duree'];
+    $sql = "INSERT INTO `consulter`(`id_patient`, `dateRdv`, `heureRdv`, `Id_Medecin`, `duree`) VALUES ('$idP','$drdv','$hrdv','$idM','$duree')";
+    $conn->exec($sql);
+    var_dump($sql);
+}
  
 ?>
 
@@ -37,23 +40,24 @@
           <?php $i=$i+1; }?>
 	  </select>
 
-          <?php
 
-          $donneesM=$conn->query("SELECT nom, prenom , id_Medecin FROM medecin");
-          while ($exec = $donneesM->fetch() ){
 
-              ?>
+              <select name="id_Medecin">
+                  <?php
 
-              <select>
+                  $donneesM=$conn->query("SELECT nom, prenom , id_Medecin FROM medecin");
+                  while ($exec = $donneesM->fetch() ){
+
+                  ?>
                   <option value="<?php echo $exec['id_Medecin']?>">
                       <?php echo $exec['nom']." ".$exec['prenom']?>
                   </option>
+                      <?php
+                  }
+                  ?>
               </select>
-    <?php
-    }
 
-    ?>
-    <select>
+    <select name="duree">
         <option value="10">
             10
         </option>
@@ -64,24 +68,24 @@
             30
         </option>
     </select>
-    <?php
 
 
-    $donneesP=$conn->query("SELECT nom, prenom, id_patient FROM patient");
-    while ($execP = $donneesP->fetch() ){
+        <select name="pat">
+            <?php
+            $donneesP=$conn->query("SELECT nom, prenom, id_patient FROM patient");
+            while ($execP = $donneesP->fetch() ){
 
-        ?>
-
-        <select>
+            ?>
                   <option value="<?php echo $execP['id_patient']?>">
                       <?php echo $execP['nom']." ".$execP['prenom']?>
                   </option>
+                <?php
+            }
+
+            ?>
               </select>
 
-              <?php
-          }
 
-          ?>
     <input type="submit" id="valider" name="valider">
 	</form>
 </body>

@@ -36,7 +36,7 @@ if(isset($_POST['ajout'])){
 <body class="p-3 mb-2 bg-info text-dark">
 	 <h3 id="nomPop">Affichage des rendez vous</h3>
 	<table>
-	<thead  class="table">
+	<thead  class="table-info align-items-center">
     <tr >
       <th scope="col">idPatient</th>
       <th scope="col">dateRdv</th>
@@ -52,7 +52,7 @@ if(isset($_POST['ajout'])){
 		?>	
         <tbody>
           <tr >
-            <td><?php echo $row['id_patient'];?></td>
+            <th scope="row"><?php echo $row['id_patient'];?></th>
             <td><?php echo $row['dateRdv'];?></td>
             <td><?php echo $row['HeureRdv'];?></td>
 			<td><?php echo $row['id_Medecin'];?></td>
