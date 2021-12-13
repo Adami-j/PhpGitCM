@@ -9,7 +9,7 @@
 	require "..\..\PhpGitCM\secu\secuConnexion.php";
     require "..\..\PhpGitCM\connect.php";
  
-<<<<<<< HEAD
+HEAD
 ?>
 
 
@@ -95,6 +95,5 @@ if(isset($_POST['valider']) ){
 					
 					
 						
-   </body>  
->>>>>>> 7a27239d00b43440a3fdf9d17bac0ab6c61f6cf1
+   </body>
 </html>
