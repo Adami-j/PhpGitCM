@@ -33,38 +33,47 @@ if(isset($_POST['ajout'])){
 	<input type="submit" name="retour"  value="retour"/>
 	<input type="submit" name="ajout"  value="ajout"/>
 <form>
-<body class="p-3 mb-2 bg-info text-dark">
-	 <h3 id="nomPop">Affichage des rendez vous</h3>
-	<table>
-	<thead  class="table-info align-items-center">
-    <tr >
-      <th scope="col">idPatient</th>
-      <th scope="col">dateRdv</th>
-      <th scope="col">HeureRdv</th>
-      <th scope="col">id_Medecin</th>
-	  <th scope="col">duree</th>
-    </tr>
-  </thead>
-   <?php
-		$sql= "SELECT id_patient, dateRdv, HeureRdv, id_Medecin, duree from consulter ORDER BY dateRdv DESC;";
-		$req = $conn ->query($sql);
-		while ($row= $req ->fetch()){
-		?>	
-        <tbody>
-          <tr >
-            <th scope="row"><?php echo $row['id_patient'];?></th>
-            <td><?php echo $row['dateRdv'];?></td>
-            <td><?php echo $row['HeureRdv'];?></td>
-			<td><?php echo $row['id_Medecin'];?></td>
-			<td><?php echo $row['duree'];?></td>
-			<td><a href="modifierRdv.php?dateRdv=<?php echo $row['dateRdv'];?>&amp;idp=<?php echo $row['id_patient'];?>&amp;heureRdv=<?php echo $row['HeureRdv'];?>">modifier</a></td>
-		  <td><a href="supprRdv.php?dateRdv=<?php echo $row['dateRdv'];?>&amp;idp=<?php echo $row['id_patient'];?>&amp;heureRdv=<?php echo $row['HeureRdv'];?>">supprimer</a></td>
-		   
-		   
-          </tr>
-        </tbody>
-		<?php }?>
-      </table>
+
+
+     <body class="p-3 mb-2 bg-info text-dark">
+     <h3 class="nomPop">Affichage des rdv</h3>
+
+     <form action="" method="POST">
+         <table class="container">
+             <thead  class="thead-light">
+             <tr >
+                 <th scope="col">idPatient</th>
+                 <th scope="col">dateRdv</th>
+                 <th scope="col">HeureRdv</th>
+                 <th scope="col">id_Medecin</th>
+                 <th scope="col">duree</th>
+             </tr>
+             </thead>
+
+             <?php
+
+            $sql= "SELECT id_patient, dateRdv, HeureRdv, id_Medecin, duree from consulter ORDER BY dateRdv DESC;";
+            $req = $conn ->query($sql);
+            while ($row= $req ->fetch()){
+		    ?>
+
+
+
+             <tbody >
+             <tr>
+
+                 <th scope="row"><?php echo $row['id_patient'];?></th>
+                 <td><?php echo $row['dateRdv'];?></td>
+                 <td><?php echo $row['HeureRdv'];?></td>
+                 <td><?php echo $row['id_Medecin'];?></td>
+                 <td><?php echo $row['duree'];?></td>
+                 <td><a href="modifierRdv.php?dateRdv=<?php echo $row['dateRdv'];?>&amp;idp=<?php echo $row['id_patient'];?>&amp;heureRdv=<?php echo $row['HeureRdv'];?>">modifier</a></td>
+                 <td><a href="supprRdv.php?dateRdv=<?php echo $row['dateRdv'];?>&amp;idp=<?php echo $row['id_patient'];?>&amp;heureRdv=<?php echo $row['HeureRdv'];?>">supprimer</a></td>
+
+                 <?php }?>
+             </tr>
+
+             </tbody>
 	
 </body>
 </html>
