@@ -1,3 +1,9 @@
+<?php
+if(isset($_POST['retour'])){
+    header("Location: ..\..\PhpGitCM\\rdv\afficherRdv.php");
+}
+?>
+
 <!doctype html>
 <html lang="fr">
 <head>
@@ -25,7 +31,9 @@ if(isset($_POST['valider'])) {
  
 ?>
 
-
+<form action="" method="POST">
+    <input type="submit" name="retour"  value="retour"/>
+<form>
 
 
 </head>
