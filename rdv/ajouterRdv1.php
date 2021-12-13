@@ -58,16 +58,16 @@ if(isset($_POST['valider'])) {
               </select>
 
     <select name="duree">
-        <option value="10">
+        <option value="00:10:00">
             10
         </option>
-        <option value="20">
+        <option value="00:20:00">
             20
         </option>
-        <option value="30">
+        <option value="00:30:00">
             30
         </option>
-    </select>
+    </select> 
 
 
         <select name="pat">
