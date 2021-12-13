@@ -8,7 +8,7 @@ if(isset($_POST['retour'])){
 }
 
 if(isset($_POST['ajout'])){
-	header("Location: ajouterRdv.php");
+	header("Location: ajouterRdv1.php");
 }
 ?>
 
