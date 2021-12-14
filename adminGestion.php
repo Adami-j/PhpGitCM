@@ -34,14 +34,7 @@ if(isset($_POST['stat'])){
 <body>
 	<h3 class="nomPop">Gestion administrateur</h3>
 	
-	<form action="" method="POST">
-	
-	<input type="submit" name="deco"  value="Deconnexion"/>
-	<input type="submit" name="patient"  value="Patient"/>
-	<input type="submit" name="medecin"  value="Medecin"/>
-	<input type="submit" name="rdv"  value="Rdv"/>
-	<input type="submit" name="stat"  value="Statistiques"/>
-	</form>
+
 	
 
 </body>

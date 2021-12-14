@@ -14,7 +14,7 @@ if(isset($_POST['retour'])){
 
 <form action="" method="POST">
     <input type="submit" name="retour"  value="retour"/>
-<form>
+</form>
 
 
 </head>

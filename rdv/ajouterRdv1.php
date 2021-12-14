@@ -69,7 +69,6 @@ if(isset($_POST['valider'])) {
         </option>
     </select>
 
-
         <select name="pat">
             <?php
             $donneesP=$conn->query("SELECT nom, prenom, id_patient FROM patient");

@@ -12,7 +12,7 @@
 
 <body>
 
-<nav>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
     <ul class="nav justify-content-end bg-black">
 	<a id="#"class="nav-link text-dark">Patient</a>
 	<a id="#"class="nav-link text-dark">Medecin</a>
