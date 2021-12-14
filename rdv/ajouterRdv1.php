@@ -1,3 +1,9 @@
+<?php
+if(isset($_POST['retour'])){
+    header("Location: ..\..\PhpGitCM\\rdv\afficherRdv.php");
+}
+?>
+
 <!doctype html>
 <html lang="fr">
 <head>
@@ -25,7 +31,9 @@ if(isset($_POST['valider'])) {
  
 ?>
 
-
+<form action="" method="POST">
+    <input type="submit" name="retour"  value="retour"/>
+<form>
 
 
 </head>
@@ -58,16 +66,16 @@ if(isset($_POST['valider'])) {
               </select>
 
     <select name="duree">
-        <option value="10">
+        <option value="00:10:00">
             10
         </option>
-        <option value="20">
+        <option value="00:20:00">
             20
         </option>
-        <option value="30">
+        <option value="00:30:00">
             30
         </option>
-    </select>
+    </select> 
 
         <select name="pat">
             <?php
