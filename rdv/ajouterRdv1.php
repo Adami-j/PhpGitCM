@@ -1,8 +1,3 @@
-<?php
-if(isset($_POST['retour'])){
-    header("Location: ..\..\PhpGitCM\\rdv\afficherRdv.php");
-}
-?>
 
 <!doctype html>
 <html lang="fr">
@@ -12,28 +7,46 @@ if(isset($_POST['retour'])){
   <link rel="stylesheet" href="style.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 <?php
+
 	require "..\..\PhpGitCM\secu\secuConnexion.php";
     require "..\..\PhpGitCM\connect.php";
 	
 	date_default_timezone_set('Europe/Paris');
 
+
+
+
 if(isset($_POST['valider'])) {
+
+
    # and isset($_POST['id_Medecin']) and  isset($_POST['id_patient']) and  isset($_POST['drdv']) and  isset($_POST['horaire'])
     $idM = $_POST['id_Medecin'];
     $idP = $_POST['pat'];
     $drdv = $_POST['drdv'];
     $hrdv = $_POST['horaire'];
     $duree = $_POST['duree'];
-    $sql = "INSERT INTO `consulter`(`id_patient`, `dateRdv`, `heureRdv`, `Id_Medecin`, `duree`) VALUES ('$idP','$drdv','$hrdv','$idM','$duree')";
-    $conn->exec($sql);
-    var_dump($sql);
+    $sqlEx = "SELECT count(*) as existance from consulter WHERE $idM=Id_Medecin AND $drdv=dateRdv and $hrdv=heureRdv ;";
+    $result = $conn->query($sqlEx);
+    $res= $result['existance'];
+    echo $res;
+
+        $sql = "INSERT INTO `consulter`(`id_patient`, `dateRdv`, `heureRdv`, `Id_Medecin`, `duree`) VALUES ('$idP','$drdv','$hrdv','$idM','$duree')";
+        $conn->exec($sql);
+        echo $res;
+        var_dump($sql);
+        header("Location : afficherRdv.php");
+
+
+}
+if (isset($_POST['retour'])) {
+    header("Location: ..\..\PhpGitCM\\rdv\afficherRdv.php");
 }
  
 ?>
 
-<form action="" method="POST">
+<form  method="POST">
     <input type="submit" name="retour"  value="retour"/>
-<form>
+</form>
 
 
 </head>
