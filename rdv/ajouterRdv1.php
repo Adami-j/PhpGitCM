@@ -22,11 +22,12 @@ function ajout(){
     $hrdv = $_POST['horaire'];
     $duree = $_POST['duree'];
     $sqlEx = "SELECT count(*) as existance from consulter WHERE $idM=Id_Medecin AND '$drdv'=dateRdv and $hrdv=heureRdv ;";
+    var_dump($sqlEx);
     $result = $conn->query($sqlEx);
     $res= $result['existance'];
     if($res=1){
-        echo $res;
-        var_dump($sqlEx);
+        echo "rdv déjà pris veuillez recommencer ";
+
     }else{$sql = "INSERT INTO `consulter`(`id_patient`, `dateRdv`, `heureRdv`, `Id_Medecin`, `duree`) VALUES ('$idP','$drdv','$hrdv','$idM','$duree')";
         $conn->exec($sql);
 
@@ -56,7 +57,7 @@ if (isset($_POST['retour'])) {
 </head>
 <body>
 <form method="POST">
-	<input type="date" id="start" name="drdv" value= min="2018-01-01" max="2018-12-31">
+	<input type="date" id="start" name="drdv" value="" min="<?php date('m-d-Y');?>">
 
 	  <select name="horaire">
           <?php  $i=7;
@@ -84,13 +85,13 @@ if (isset($_POST['retour'])) {
               </select>
 
     <select name="duree">
-        <option value="00:10:00">
+        <option value="10:00">
             10
         </option>
-        <option value="00:20:00">
+        <option value="20:00">
             20
         </option>
-        <option value="00:30:00">
+        <option value="30:00">
             30
         </option>
     </select> 
