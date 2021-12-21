@@ -13,28 +13,34 @@
 	
 	date_default_timezone_set('Europe/Paris');
 
+function ajout(){
 
-
-
-if(isset($_POST['valider'])) {
-
-
-   # and isset($_POST['id_Medecin']) and  isset($_POST['id_patient']) and  isset($_POST['drdv']) and  isset($_POST['horaire'])
+    require "..\..\PhpGitCM\connect.php";
     $idM = $_POST['id_Medecin'];
     $idP = $_POST['pat'];
     $drdv = $_POST['drdv'];
     $hrdv = $_POST['horaire'];
     $duree = $_POST['duree'];
-    $sqlEx = "SELECT count(*) as existance from consulter WHERE $idM=Id_Medecin AND $drdv=dateRdv and $hrdv=heureRdv ;";
+    $sqlEx = "SELECT count(*) as existance from consulter WHERE $idM=Id_Medecin AND '$drdv'=dateRdv and $hrdv=heureRdv ;";
     $result = $conn->query($sqlEx);
     $res= $result['existance'];
-    echo $res;
-
-        $sql = "INSERT INTO `consulter`(`id_patient`, `dateRdv`, `heureRdv`, `Id_Medecin`, `duree`) VALUES ('$idP','$drdv','$hrdv','$idM','$duree')";
-        $conn->exec($sql);
+    if($res=1){
         echo $res;
-        var_dump($sql);
-        header("Location : afficherRdv.php");
+        var_dump($sqlEx);
+    }else{$sql = "INSERT INTO `consulter`(`id_patient`, `dateRdv`, `heureRdv`, `Id_Medecin`, `duree`) VALUES ('$idP','$drdv','$hrdv','$idM','$duree')";
+        $conn->exec($sql);
+
+
+        header("Location : afficherRdv.php");}
+
+
+}
+
+
+if(isset($_POST['valider']) and isset($_POST['drdv']) ) {
+
+
+    ajout();
 
 
 }
@@ -47,10 +53,9 @@ if (isset($_POST['retour'])) {
 <form  method="POST">
     <input type="submit" name="retour"  value="retour"/>
 </form>
-
-
 </head>
-<body><form method="POST">
+<body>
+<form method="POST">
 	<input type="date" id="start" name="drdv" value= min="2018-01-01" max="2018-12-31">
 
 	  <select name="horaire">
