@@ -21,21 +21,19 @@ function ajout(){
     $drdv = $_POST['drdv'];
     $hrdv = $_POST['horaire'];
     $duree = $_POST['duree'];
-    $sqlEx = "SELECT count(*) as existance from consulter WHERE $idM=Id_Medecin AND '$drdv'=dateRdv and $hrdv=heureRdv ;";
-    var_dump($sqlEx);
-    $result = $conn->query($sqlEx);
-    $res= $result['existance'];
-    if($res=1){
-        echo "rdv déjà pris veuillez recommencer ";
-
-    }else{$sql = "INSERT INTO `consulter`(`id_patient`, `dateRdv`, `heureRdv`, `Id_Medecin`, `duree`) VALUES ('$idP','$drdv','$hrdv','$idM','$duree')";
+    $count = "SELECT count(*) as nb FROM consulter";
+    $ex=$conn->query($count);
+    if ($ex>2){
+        echo "cc";
+    }
+   $sql = "INSERT INTO `consulter`(`id_patient`, `dateRdv`, `heureRdv`, `Id_Medecin`, `duree`) VALUES ('$idP','$drdv','$hrdv','$idM','$duree')";
         $conn->exec($sql);
 
 
         header("Location : afficherRdv.php");}
 
 
-}
+
 
 
 if(isset($_POST['valider']) and isset($_POST['drdv']) ) {
