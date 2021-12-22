@@ -2,47 +2,43 @@
 <html lang="fr">
 <head>
   <meta charset="utf-8">
-	<title class="titrePage">Connexion au service</title>
+	<title class="titrePage">Gestion admin</title>
 	<link rel="stylesheet" href="style.css">
-	
-	
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+
 </head>
 <?php
 
 require "secu/secuConnexion.php";
-echo "Bonjour ".$_SESSION['login']." il est actuellement ";
-date_default_timezone_set('EUROPE/Paris');
-$date=date("H:i");
-	echo $date;
 
 
-if(isset($_POST['patient'])){
-	header('Location:patient/patient.php');
-}
-if(isset($_POST['medecin'])){
-	header('Location:medecin/medecin.php');
-}
-if(isset($_POST['rdv'])){
-	header('Location: rdv/afficherRdv.php');
-}
-
-if(isset($_POST['stat'])){
-	header('Location: stats/stats.php');
-}
 ?>
 
 <body>
-	<h3 class="nomPop">Gestion administrateur</h3>
-	
-	<form action="" method="POST">
-
-	<input type="submit" name="deco"  value="Deconnexion"/>
-	<input type="submit" name="patient"  value="Patient"/>
-	<input type="submit" name="medecin"  value="Medecin"/>
-	<input type="submit" name="rdv"  value="Rdv"/>
-	<input type="submit" name="stat"  value="Statistiques"/>
-	</form>
 	
 
+	
+
+<ul class="nav nav-pills nav-justified">
+    <li class="nav-item">
+        <a class="nav-link active" href="patient/patient.php"> patient</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link active" href="medecin/medecin.php"> medecin</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link active" href="rdv/afficherRdv.php"> rdv</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link active" href="stats/stats.php"> stats</a>
+    </li>
+
+    <form method="POST">
+        <div class="form-group">
+            <button type="submit" name="deco"  class="btn btn-primary" value="Deconnexion" >Deconnexion</button>
+        </div>
+    </form>
+</ul>
 </body>
 </html>
