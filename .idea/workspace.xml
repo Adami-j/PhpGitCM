@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ff4964a1-282d-4bcf-b5e8-cb85f7798277" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/patient/patientPHP.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/patient/patientSuppPHP.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/patient/ajoutPatient.php" beforeDir="false" afterPath="$PROJECT_DIR$/patient/ajoutPatient.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/patient/supprPatient.php" beforeDir="false" afterPath="$PROJECT_DIR$/patient/supprPatient.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +40,7 @@
       <option name="presentableId" value="Default" />
       <updated>1640187306868</updated>
       <workItem from="1640187309569" duration="2055000" />
-      <workItem from="1640270198407" duration="1456000" />
+      <workItem from="1640270198407" duration="2345000" />
     </task>
     <servers />
   </component>
