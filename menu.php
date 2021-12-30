@@ -1,7 +1,7 @@
 
 
 <nav class="navbar navbar-expand-md bg-dark">
-    <a href="#" class="navbar-brand">Cabinet medical</a>
+    <a href="..\..\PhpGitCm\adminGestion.php" class="navbar-brand">Cabinet medical</a>
     <div class=" navbar-collapse">
         <ul class="navbar-nav m-auto">
             <li class="nav-item active">

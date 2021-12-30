@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a06d0145-ada9-4a86-8950-66e466b9df7c" name="Changes" comment="modif de l'ajout de rdv">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adminGestion.php" beforeDir="false" afterPath="$PROJECT_DIR$/adminGestion.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Procfile" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/menu.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/patient/patient.php" beforeDir="false" afterPath="$PROJECT_DIR$/patient/patient.php" afterDir="false" />
     </list>
@@ -45,7 +44,7 @@
       <updated>1640187306868</updated>
       <workItem from="1640187309569" duration="2055000" />
       <workItem from="1640270198407" duration="2345000" />
-      <workItem from="1640884380005" duration="1927000" />
+      <workItem from="1640884380005" duration="3561000" />
     </task>
     <servers />
   </component>
