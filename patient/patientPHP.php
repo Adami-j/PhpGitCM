@@ -30,4 +30,7 @@ if(isset($_POST['valider']) ){
         }
     }
 }
+if(isset($_POST['retour'])){
+    header('Location:patient.php');
+}
 ?>

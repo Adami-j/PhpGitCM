@@ -10,6 +10,7 @@
 	require "..\..\PhpGitCM\secu\secuConnexion.php";
 	require "..\..\PhpGitCM\connect.php";
     require "patientSuppPHP.php";
+  require "..\..\PhpGitCM\menu.php";
    ?>
 </head>
 	<body>

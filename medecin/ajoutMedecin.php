@@ -34,15 +34,15 @@ if(isset($_POST['valider']) ){
 				}else{
 					$errorMessage = 'Ce médecin existe déjà';
 				}
-			
-			
-			
-			
-			
 			}
 		}
 }
-		?>
+
+if (isset($_POST['retour'])) {
+    header(' Location: momo.php');
+}
+
+?>
 
 <!DOCTYPE html>  
 <html>  
@@ -57,21 +57,54 @@ if(isset($_POST['valider']) ){
 			 <title>Ajouter un patient</title>  
 	</head>  
 	<body>  
-		<h1 id="usagerTitre">Saisie des informations de du médecin</h1></br>
-			<form action="" method="POST" >
-				Civilité                   :</br><select name="selectCivilite"/> 
-											<option value="Monsieur">Monsieur</option>
-											<option value="Madame">Madame</option></select></br>
-				Nom                        :<input type="text" id="nom" name="nom" ></br>
-				Prénom                     :<input type="text" id="prenom" name="prenom" ></br>
-				<input type="submit" id="valider" name="valider">
-				<?php if(!empty($errorMessage)){
-					echo $errorMessage;
-				}?>
-			</form>
-			<a href="medecin.php"><button id="retour">annuler</button></a>
-					
-					
-						
+
+        <div class="container">
+
+
+            <!-- Start Form -->
+            <div>
+                <h4>informations médecin</h4>
+                <hr>
+            </div>
+
+            <div class="needs-validation" novalidate>
+
+                <form action=""  method="POST" >
+
+                    <select name="selectCivilite"/>
+                    <option value="Monsieur">Monsieur</option>
+                    <option value="Madame">Madame</option></select>
+
+
+
+                    <div class="row">
+
+                        <div class="form-group col-md-6">
+
+                            <label for="nom">Nom</label>
+
+                            <input type="text" id="nom" name="nom" class="form-control "value="" >
+
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label for="prenom">Prénom</label>
+                            <input type="text" id="prenom" name="prenom" class="form-control " value="">
+                        </div>
+
+                        <div class="form-group ">
+                            <input type="submit"  id="envoi" class="btn btn-outline-success" name="valider" value="Envoyer"></input>
+                            <input type="submit" id="retour" class="btn btn-outline-danger" name="retour" value="Retour"></input>
+
+
+                        </div>
+
+
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
    </body>  
 </html>

@@ -72,6 +72,8 @@
 
 
                         </div>
+                    </div>
+                </form>
 
                         <?php
 
@@ -89,7 +91,7 @@
                             }
                         }
                         if(isset($_POST['retour'])){
-                            header('Location:medecin.php');
+                            header('Location: medecin.php');
                         }
                         ?>
 
