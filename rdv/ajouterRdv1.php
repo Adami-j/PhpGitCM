@@ -23,7 +23,7 @@ function ajout(){
     $duree = $_POST['duree'];
     $count = "SELECT count(*) as nb FROM consulter";
     $ex=$conn->query($count);
-    if ($ex>2){
+    if ($ex['nb']>2){
         echo "cc";
     }
    $sql = "INSERT INTO `consulter`(`id_patient`, `dateRdv`, `heureRdv`, `Id_Medecin`, `duree`) VALUES ('$idP','$drdv','$hrdv','$idM','$duree')";

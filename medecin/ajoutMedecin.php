@@ -5,6 +5,7 @@
 
 	require "..\..\PhpGitCM\secu\secuConnexion.php";
 	require "..\..\PhpGitCM\connect.php";
+	require "..\..\PhpGitCM\menu.php";
 	
 	
 if(isset($_POST['valider']) ){

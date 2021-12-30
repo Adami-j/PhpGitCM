@@ -8,6 +8,7 @@
   <?php
 	require "secuConnexion.php";
 	require "connect.php";
+	require "..\..\PhpGitCM\menu.php";
 	$id=$_GET['id'];
 	
 	$req = "DELETE FROM patient WHERE id_patient='$id'";

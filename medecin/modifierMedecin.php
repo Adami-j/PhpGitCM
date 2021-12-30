@@ -15,6 +15,7 @@
 		
 	require "..\..\PhpGitCM\secu\secuConnexion.php";
 	require "..\..\PhpGitCM\connect.php";
+	require "..\..\PhpGitCM\menu.php";
 		
 		$id=$_GET['id'];
 		$req = $conn->query("SELECT nom, civilite, prenom FROM medecin WHERE id_Medecin= $id " );
