@@ -81,7 +81,14 @@
 
                 <form action=""  method="POST" >
 
-                    <select name="selectCivilite"/>                     <?php if($row['civilite']=='Monsieur'){                         echo "<option value='Monsieur'>Monsieur</option>              <option value='Madame'>Madame</option></select></br>";                     }else{                         echo "<option value='Madame'>Madame</option>              <option value='Monsieur'>Monsieur</option></select></br>";                     }                     ?>
+                    <select name="selectCivilite"/>
+                    <?php if($row['civilite']=='Monsieur'){
+                             echo "<option value='Monsieur'>Monsieur</option>  <option value='Madame'>Madame</option></select></br>";
+
+                    }else{
+                        echo "<option value='Madame'>Madame</option>
+                        <option value='Monsieur'>Monsieur</option></select></br>"; }
+                    ?>
 
 
 
@@ -138,9 +145,9 @@
 
                     </div>
 
-                    <div class="form-group">
-                    <input type="submit"  id="envoi" class="btn btn-outline-success" name="envoi">Submit</input>
-                    <input type="submit" id="retour" class="btn btn-outline-danger" name="retour">Reset</input>
+                    <div class="form-group ">
+                        <input type="submit"  id="envoi" class="btn btn-outline-success" name="envoi" value="Envoyer"></input>
+                        <input type="submit" id="retour" class="btn btn-outline-danger" name="retour" value="Retour"></input>
 
 
                     </div>

@@ -4,11 +4,12 @@ require "..\..\PhpGitCM\connect.php";
 
 
 
-
-    $sqlM="SELECT id_medecin,nom from medecin";
-    $res =$conn->query($sqlM);
-    $idp=$_GET['id'];
-    $idm = $_POST['medecin'];
+    if(isset($_POST['medecin'])) {
+              $idm = $_POST['medecin'];
+    }
+    $sqlM = "SELECT id_medecin,nom from medecin";
+    $res = $conn->query($sqlM);
+    $idp = $_GET['id'];
     if(isset($_POST['valider']) and isset($_POST['medecin'])){
         $count = "SELECT count(*) as nb FROM referent WHERE `id_patient` = $idp and `O_N` = 1 ";
         $ex=$conn->query($count);

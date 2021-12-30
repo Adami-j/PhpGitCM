@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a06d0145-ada9-4a86-8950-66e466b9df7c" name="Changes" comment="menu ajout patient et aptient">
+    <list default="true" id="a06d0145-ada9-4a86-8950-66e466b9df7c" name="Changes" comment="modif">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/medecin/medecin.php" beforeDir="false" afterPath="$PROJECT_DIR$/medecin/medecin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/medecin/modifierMedecin.php" beforeDir="false" afterPath="$PROJECT_DIR$/medecin/modifierMedecin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient/mdrf.php" beforeDir="false" afterPath="$PROJECT_DIR$/patient/mdrf.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/patient/modifierPatient.php" beforeDir="false" afterPath="$PROJECT_DIR$/patient/modifierPatient.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/patient/patient.php" beforeDir="false" afterPath="$PROJECT_DIR$/patient/patient.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rdv/afficherRdv.php" beforeDir="false" afterPath="$PROJECT_DIR$/rdv/afficherRdv.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stats/stats.php" beforeDir="false" afterPath="$PROJECT_DIR$/stats/stats.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +48,7 @@
       <updated>1640187306868</updated>
       <workItem from="1640187309569" duration="2055000" />
       <workItem from="1640270198407" duration="2345000" />
-      <workItem from="1640884380005" duration="7815000" />
+      <workItem from="1640884380005" duration="11264000" />
     </task>
     <task id="LOCAL-00001" summary="menu ajout patient et aptient">
       <created>1640888007689</created>
@@ -51,7 +57,14 @@
       <option name="project" value="LOCAL" />
       <updated>1640888007689</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="modif">
+      <created>1640896001109</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1640896001109</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -70,6 +83,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="menu ajout patient et aptient" />
-    <option name="LAST_COMMIT_MESSAGE" value="menu ajout patient et aptient" />
+    <MESSAGE value="modif" />
+    <option name="LAST_COMMIT_MESSAGE" value="modif" />
   </component>
 </project>

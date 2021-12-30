@@ -26,30 +26,23 @@ if(isset($_POST['ajout'])){
 
 ?>
 
-<br>
 
-<body class=" mb-2 bg-info text-dark">
+<body >
 
 	<h3 class="page-header text-center apie_m_cga">Gestion des patients</h3>
 	<hr>
-
-
-
-
-	
-
-
-
 
     <div class="boostrap-table">
 
         <div class="container">
             <div class="row">
                 <div class="col-xl-2"></div>
-                <div class="col-xl-14">
+                <div class="col-xl-17">
+
                     <form action="" method="POST">
                         <input type="submit" name="ajout"  value="ajout d'un patient" class="btn-dark"/>
                     </form>
+
                     <table class="table table-striped table-bordered">
                         <thead class="text-center table-dark">
                         <tr>
