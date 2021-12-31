@@ -13,7 +13,8 @@
 	
 	date_default_timezone_set('Europe/Paris');
 
-function ajout(){
+function ajout()
+{
 
     require "..\..\PhpGitCM\connect.php";
     $idM = $_POST['id_Medecin'];
@@ -21,26 +22,15 @@ function ajout(){
     $drdv = $_POST['drdv'];
     $hrdv = $_POST['horaire'];
     $duree = $_POST['duree'];
-    $count = "SELECT count(*) as nb FROM consulter";
-    $ex=$conn->query($count);
-    if ($ex['nb']>2){
-        echo "cc";
-    }
-   $sql = "INSERT INTO `consulter`(`id_patient`, `dateRdv`, `heureRdv`, `Id_Medecin`, `duree`) VALUES ('$idP','$drdv','$hrdv','$idM','$duree')";
-        $conn->exec($sql);
+    $sql = "INSERT INTO `consulter`(`id_patient`, `dateRdv`, `heureRdv`, `Id_Medecin`, `duree`) VALUES ('$idP','$drdv','$hrdv','$idM','$duree')";
+    $conn->exec($sql);
 
+}
 
-        header("Location : afficherRdv.php");}
-
-
-
-
-
-if(isset($_POST['valider']) and isset($_POST['drdv']) ) {
-
+if(isset($_POST['valider']) and isset($_POST['drdv']) and isset($_POST['pat']) and isset($_POST['horaire']) and isset($_POST['duree'])) {
 
     ajout();
-
+    header("Location: ..\..\PhpGitCM\\rdv\afficherRdv.php");
 
 }
 if (isset($_POST['retour'])) {
@@ -83,13 +73,13 @@ if (isset($_POST['retour'])) {
               </select>
 
     <select name="duree">
-        <option value="10:00">
+        <option value="00:10:00">
             10
         </option>
-        <option value="20:00">
+        <option value="00:20:00">
             20
         </option>
-        <option value="30:00">
+        <option value="00:30:00">
             30
         </option>
     </select> 
@@ -111,6 +101,7 @@ if (isset($_POST['retour'])) {
 
 
     <input type="submit" id="valider" name="valider">
+
 	</form>
 </body>
 </html>

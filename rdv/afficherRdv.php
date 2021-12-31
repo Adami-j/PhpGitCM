@@ -37,10 +37,12 @@ require "..\..\PhpGitCM\menu.php";?>
                      <table class="table table-striped table-bordered">
                          <thead class="text-center table-dark">
                          <tr>
-                             <th scope="col">idPatient</th>
+                             <th scope="col">Nom patient</th>
+                             <th scope="col">Prénom patient</th>
                              <th scope="col">dateRdv</th>
                              <th scope="col">HeureRdv</th>
-                             <th scope="col">id_Medecin</th>
+                             <th scope="col">Nom medecin</th>
+                             <th scope="col">Prénom medecin</th>
                              <th scope="col">duree</th>
 
                          </tr>
@@ -48,15 +50,25 @@ require "..\..\PhpGitCM\menu.php";?>
                          <tbody>
                          <?php
                          $sql= "SELECT id_patient, dateRdv, HeureRdv, id_Medecin, duree from consulter ORDER BY dateRdv DESC;";
+
                          $req = $conn ->query($sql);
                          while ($row= $req ->fetch()){
+                              $sqlP = "SELECT * FROM patient WHERE id_patient = ".$row['id_patient']."";
+                              $exeP = $conn->query($sqlP);
+                              $exePF = $exeP->fetch();
+
+                             $sqlM = "SELECT id_Medecin, nom, prenom FROM medecin WHERE id_Medecin = ".$row['id_Medecin']."";
+                             $exeM = $conn->query($sqlM);
+                             $exeMF = $exeM->fetch();
                          ?>
                          <tr class="table-light">
 
-                             <td><?php echo $row['id_patient'];?></td>
+                             <td><?php echo $exePF['nom'];?></td>
+                             <td><?php echo $exePF['prenom'];?></td>
                              <td><?php echo $row['dateRdv'];?></td>
                              <td><?php echo $row['HeureRdv'];?></td>
-                             <td><?php echo $row['id_Medecin'];?></td>
+                             <td><?php echo $exeMF['nom'];?></td>
+                             <td><?php echo $exeMF['prenom'];?></td>
                              <td><?php echo $row['duree'];?></td>
                              <td><a href="modifierRdv.php?dateRdv=<?php echo $row['dateRdv'];?>&amp;idp=<?php echo $row['id_patient'];?>&amp;heureRdv=<?php echo $row['HeureRdv'];?>">modifier</a></td>
                              <td><a href="supprRdv.php?dateRdv=<?php echo $row['dateRdv'];?>&amp;idp=<?php echo $row['id_patient'];?>&amp;heureRdv=<?php echo $row['HeureRdv'];?>">supprimer</a></td>
