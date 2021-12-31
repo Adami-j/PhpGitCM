@@ -1,11 +1,13 @@
 <?php
-require "..\..\PhpGitCM\menu.php";?>
+require "..\..\PhpGitCM\menu.php";
+require "../../PhpGitCM/style.html";?>
+
 <!doctype html>
 <html lang="fr">
 <head>
   <meta charset="utf-8">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-	<title class="titrePage">Connexion au service</title>
+	<title class="titrePage">Gestion des médecins</title>
 	<link rel="stylesheet" href="style.css">
 
 </head>
@@ -24,7 +26,7 @@ if(isset($_POST['ajout'])){
 
 <body>
 
-    <h3 class="page-header text-center apie_m_cga">Gestion des médecins</h3>
+    <h3 class="page-header text-center apie_m_cga" style="color : white">Gestion des médecins</h3>
     <hr>
     <div class="boostrap-table">
 

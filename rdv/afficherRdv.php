@@ -22,8 +22,9 @@ require "..\..\PhpGitCM\menu.php";?>
 </head>
 
 <body class="bg-light">
+<?php require "../../PhpGitCM/style.html";?>
 
-     <h3 class="page-header text-center apie_m_cga">Gestion des rdv</h3>
+     <h3 class="page-header text-center apie_m_cga " style="color: white">Gestion des rdv</h3>
      <hr>
      <div class="boostrap-table">
 
@@ -44,6 +45,8 @@ require "..\..\PhpGitCM\menu.php";?>
                              <th scope="col">Nom medecin</th>
                              <th scope="col">Prénom medecin</th>
                              <th scope="col">duree</th>
+                             <th scope="col">modifier</th>
+                             <th scope="col">supprimer</th>
 
                          </tr>
                          </thead>

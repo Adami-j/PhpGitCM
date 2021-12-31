@@ -1,5 +1,6 @@
 <?php
 require "..\..\PhpGitCM\menu.php";
+require "../../PhpGitCM/style.html";
 if(isset($_POST['retour'])){
     header("Location: ..\..\PhpGitCM\adminGestion.php");
 
@@ -18,7 +19,7 @@ if(isset($_POST['retour'])){
 </head>
 
 <div class="text-center">
-    <h4>Statistiques</h4>
+    <h4 style="color: white">Statistiques</h4>
     <hr>
 </div>
 
@@ -72,19 +73,21 @@ if(isset($_POST['retour'])){
 
         <div class="boostrap-table">
 
-            <div class="container">
+            <div class="container ">
                 <div class="row">
                     <div class="col-xl-2"></div>
-                    <div class="col-xl-10">
+                    <div class="col-xl-13">
 
 
                         <table class="table table-striped table-bordered">
-                            <thead class="text-center table-light">
+                            <thead class="text-center table-dark">
                             <tr>
                                 <th>Tranche d'âge</th>
                                 <th>Nb Hommes</th>
                                 <th>Nb Femmes</th>
                             </tr>
+                            </thead>
+                            <thead class="text-center table-light">
                             <tr>
                                 <td>Moins de 25 ans</td>
                                 <td><?php echo $h25['nbPatient'] ?></td>

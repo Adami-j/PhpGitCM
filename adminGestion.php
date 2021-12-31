@@ -16,6 +16,7 @@ require "menu.php";
 ?>
 
 <body>
+<?php require "style.html";?>
 
 </body>
 </html>

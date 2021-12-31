@@ -1,5 +1,6 @@
 <?php
 require "..\..\PhpGitCM\menu.php";
+require "../../PhpGitCM/style.html";
 ?>
 <!doctype html>
 <html lang="fr">
@@ -29,7 +30,7 @@ if(isset($_POST['ajout'])){
 
 <body >
 
-	<h3 class="page-header text-center apie_m_cga">Gestion des patients</h3>
+	<h3 class="page-header text-center apie_m_cga" style="color: white">Gestion des patients</h3>
 	<hr>
 
     <div class="boostrap-table">
