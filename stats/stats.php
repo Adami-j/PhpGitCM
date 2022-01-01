@@ -114,6 +114,15 @@ if(isset($_POST['retour'])){
                     <div class="col-xl-2"></div>
                 </div>
             </div>
+            <div>
+                <div class="form-select ms-auto ">
+                    <SELECT>
+                        <option>
+
+                        </option>
+                    </SELECT>
+                </div>
+            </div>
         </div>
 
     
@@ -129,8 +138,8 @@ if(isset($_POST['retour'])){
         while ($exec2 = $dure->fetch()){
             $total += temps_en_minutes($exec2['duree']);
             }
-        echo 'La durée totale des consultations est de ' . nombre_heure($total) . "pour le docteur " . $infomed['prenom'] . " " . $infomed['nom'] . ". ";
-        }
+        ?><p style=" background: white" style="back" > La durée totale des consultations est de ' . nombre_heure($total) . "pour le docteur " . $infomed['prenom'] . " " . $infomed['nom'] . ". " ;</p>
+        <?php }
 
 
     ?>
