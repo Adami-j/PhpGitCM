@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a06d0145-ada9-4a86-8950-66e466b9df7c" name="Changes" comment="modification u stye général (ajout photo de backgroud + fichier html &#10;style)">
+    <list default="true" id="a06d0145-ada9-4a86-8950-66e466b9df7c" name="Changes" comment="bonne année">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/menu.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rdv/ajouterRdv1.php" beforeDir="false" afterPath="$PROJECT_DIR$/rdv/ajouterRdv1.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stats/stats.php" beforeDir="false" afterPath="$PROJECT_DIR$/stats/stats.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/secuConnexion.php" beforeDir="false" afterPath="$PROJECT_DIR$/secuConnexion.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +45,7 @@
       <workItem from="1640187309569" duration="2055000" />
       <workItem from="1640270198407" duration="2345000" />
       <workItem from="1640884380005" duration="14093000" />
-      <workItem from="1640913938420" duration="8556000" />
+      <workItem from="1640913938420" duration="10876000" />
     </task>
     <task id="LOCAL-00001" summary="menu ajout patient et aptient">
       <created>1640888007689</created>
@@ -88,7 +89,14 @@
       <option name="project" value="LOCAL" />
       <updated>1640918141452</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="bonne année">
+      <created>1640996353957</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1640996353957</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -112,6 +120,7 @@
     <MESSAGE value="modif css et pb boutons retour" />
     <MESSAGE value="modif rdv et afficher rdv" />
     <MESSAGE value="modification u stye général (ajout photo de backgroud + fichier html &#10;style)" />
-    <option name="LAST_COMMIT_MESSAGE" value="modification u stye général (ajout photo de backgroud + fichier html &#10;style)" />
+    <MESSAGE value="bonne année" />
+    <option name="LAST_COMMIT_MESSAGE" value="bonne année" />
   </component>
 </project>
