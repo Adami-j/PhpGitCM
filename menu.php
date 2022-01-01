@@ -6,7 +6,7 @@
     <div class=" navbar-collapse">
         <ul class="navbar-nav m-auto">
             <li class="nav-item active"   >
-                <a href="..\..\PhpGitCM\patient/patient.php" class="nav-link" >Patient</a>
+                <a href="..\patient/patient.php" class="nav-link" >Patient</a>
             </li>
             <li class="nav-item">
                 <a href="..\..\PhpGitCM\medecin/medecin.php" class="nav-link">Medecin</a>
