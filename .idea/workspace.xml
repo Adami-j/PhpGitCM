@@ -44,7 +44,7 @@
       <workItem from="1640187309569" duration="2055000" />
       <workItem from="1640270198407" duration="2345000" />
       <workItem from="1640884380005" duration="14093000" />
-      <workItem from="1640913938420" duration="12893000" />
+      <workItem from="1640913938420" duration="14795000" />
     </task>
     <task id="LOCAL-00001" summary="menu ajout patient et aptient">
       <created>1640888007689</created>
@@ -130,7 +130,14 @@
       <option name="project" value="LOCAL" />
       <updated>1641054484448</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="conect">
+      <created>1641054598260</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1641054598260</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

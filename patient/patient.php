@@ -1,6 +1,6 @@
 <?php
-require "..\..\PhpGitCM\menu.php";
-require "../../PhpGitCM/style.html";
+require "menu.php";
+require "style.html";
 ?>
 <!doctype html>
 <html lang="fr">
@@ -13,8 +13,8 @@ require "../../PhpGitCM/style.html";
 </head>
 
 <?php
-require "..\..\PhpGitCM\secu\secuConnexion.php";
-require "..\..\PhpGitCM\connect.php";
+require "secu\secuConnexion.php";
+require "connect.php";
 
 
 if(isset($_POST['ajout'])){
