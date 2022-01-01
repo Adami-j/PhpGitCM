@@ -1,6 +1,6 @@
 <?php
-require "../menu.php";
-require "../style.html";
+require "..\..\PhpGitCM\menu.php";
+require "../../PhpGitCM/style.html";
 ?>
 <!doctype html>
 <html lang="fr">
@@ -13,8 +13,8 @@ require "../style.html";
 </head>
 
 <?php
-
-require "../connect.php";
+require "..\..\PhpGitCM\secu\secuConnexion.php";
+require "..\..\PhpGitCM\connect.php";
 
 
 if(isset($_POST['ajout'])){
@@ -30,7 +30,7 @@ if(isset($_POST['ajout'])){
 
 <body >
 
-	<h3 class="page-header text-center apie_m_cga" style="color: ">Gestion des patients</h3>
+	<h3 class="page-header text-center apie_m_cga" style="color: white">Gestion des patients</h3>
 	<hr>
 
     <div class="boostrap-table">
