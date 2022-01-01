@@ -39,9 +39,6 @@ if (isset($_POST['retour'])) {
  
 ?>
 
-<form  method="POST">
-    <input type="submit" name="retour"  value="retour"/>
-</form>
 </head>
 <body>
 <form method="POST">
@@ -51,45 +48,24 @@ if (isset($_POST['retour'])) {
 
 
 
-    <select name="duree">
-        <option value="00:10:00">
-            10
-        </option>
-        <option value="00:20:00">
-            20
-        </option>
-        <option value="00:30:00">
-            30
-        </option>
-    </select> 
 
-
-
-
-    <input type="submit" id="valider" name="valider">
 
 	</form>
 
 <div class="needs-validation" novalidate>
 
     <form action=""  method="POST" >
-
-
-
-
-
         <div class="row">
 
-            <div class="form-group col-md-6">
+            <div class="form-group col-md-3 mb-3">
 
                 <label for="drdv">Date du rdv</label>
 
                 <input class="form-select" type="date" id="start" name="drdv" value="" min="<?php date('m-d-Y');?>">
 
-
             </div>
 
-            <div class="col-md-6 mb-3">
+            <div class="col-md-3 mb-3 ">
                 <label for="hrdf">heure du rdv</label>
                 <select class="form-select" name="horaire">
                     <?php  $i=7;
@@ -100,7 +76,23 @@ if (isset($_POST['retour'])) {
                 </select>
 
             </div>
+            <div class="col-md-3 mb-3 ">
+                <label for="duree">durée du rdv</label>
+                <select name="duree" class="form-select">
+                    <option value="00:10:00">
+                        10
+                    </option>
+                    <option value="00:20:00">
+                        20
+                    </option>
+                    <option value="00:30:00">
+                        30
+                    </option>
+                </select>
 
+
+
+            </div>
             <div class="col-md-6 mb-3">
                 <label for="prenom">Médecin</label>
                 <select class="form-select" name="id_Medecin">
@@ -139,7 +131,16 @@ if (isset($_POST['retour'])) {
                 </select>
 
             </div>
+
+
+            <div class="form-group ">
+                <input type="submit"  id="envoi" class="btn btn-outline-success" name="valider" value="Envoyer">
+                <input type="submit" id="retour" class="btn btn-outline-danger" name="retour" value="Retour" >
+
+
+            </div>
         </div>
+    </form>
 
 </body>
 </html>
