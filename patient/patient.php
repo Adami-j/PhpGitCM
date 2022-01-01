@@ -1,6 +1,6 @@
 <?php
-require "menu.php";
-require "style.html";
+require "../menu.php";
+require "../style.html";
 ?>
 <!doctype html>
 <html lang="fr">
@@ -13,8 +13,8 @@ require "style.html";
 </head>
 
 <?php
-require "secu\secuConnexion.php";
-require "connect.php";
+
+require "../connect.php";
 
 
 if(isset($_POST['ajout'])){
