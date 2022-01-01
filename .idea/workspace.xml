@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a06d0145-ada9-4a86-8950-66e466b9df7c" name="Changes" comment="conect">
+    <list default="true" id="a06d0145-ada9-4a86-8950-66e466b9df7c" name="Changes" comment="test heroku connect">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/menu.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/patient/patient.php" beforeDir="false" afterPath="$PROJECT_DIR$/patient/patient.php" afterDir="false" />
@@ -45,7 +45,7 @@
       <workItem from="1640270198407" duration="2345000" />
       <workItem from="1640884380005" duration="14093000" />
       <workItem from="1640913938420" duration="15798000" />
-      <workItem from="1641059644884" duration="97000" />
+      <workItem from="1641059644884" duration="240000" />
     </task>
     <task id="LOCAL-00001" summary="menu ajout patient et aptient">
       <created>1640888007689</created>
@@ -159,7 +159,14 @@
       <option name="project" value="LOCAL" />
       <updated>1641057211069</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="test heroku connect">
+      <created>1641059758900</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1641059758900</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -185,6 +192,7 @@
     <MESSAGE value="modification u stye général (ajout photo de backgroud + fichier html &#10;style)" />
     <MESSAGE value="bonne année" />
     <MESSAGE value="conect" />
-    <option name="LAST_COMMIT_MESSAGE" value="conect" />
+    <MESSAGE value="test heroku connect" />
+    <option name="LAST_COMMIT_MESSAGE" value="test heroku connect" />
   </component>
 </project>
