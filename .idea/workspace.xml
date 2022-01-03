@@ -3,8 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="a06d0145-ada9-4a86-8950-66e466b9df7c" name="Changes" comment="test heroku connect">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/menu.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/patient/patient.php" beforeDir="false" afterPath="$PROJECT_DIR$/patient/patient.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rdv/afficherRdv.php" beforeDir="false" afterPath="$PROJECT_DIR$/rdv/afficherRdv.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rdv/ajouterRdv1.php" beforeDir="false" afterPath="$PROJECT_DIR$/rdv/ajouterRdv1.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style.html" beforeDir="false" afterPath="$PROJECT_DIR$/style.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +46,9 @@
       <workItem from="1640270198407" duration="2345000" />
       <workItem from="1640884380005" duration="14093000" />
       <workItem from="1640913938420" duration="15798000" />
-      <workItem from="1641059644884" duration="893000" />
+      <workItem from="1641059644884" duration="1101000" />
+      <workItem from="1641066981531" duration="2237000" />
+      <workItem from="1641212747850" duration="88000" />
     </task>
     <task id="LOCAL-00001" summary="menu ajout patient et aptient">
       <created>1640888007689</created>
@@ -173,7 +176,14 @@
       <option name="project" value="LOCAL" />
       <updated>1641059893849</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="test heroku connect">
+      <created>1641060886847</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1641060886847</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

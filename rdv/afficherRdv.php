@@ -22,7 +22,8 @@ require "..\..\PhpGitCM\menu.php";?>
 </head>
 
 <body class="bg-light">
-<?php require "../../PhpGitCM/style.html";?>
+<?php require "../../PhpGitCM/style.html";
+date_default_timezone_set('Europe/Paris');?>
 
      <h3 class="page-header text-center apie_m_cga " style="color: white">Gestion des rdv</h3>
      <hr>
@@ -64,7 +65,7 @@ require "..\..\PhpGitCM\menu.php";?>
                              $exeM = $conn->query($sqlM);
                              $exeMF = $exeM->fetch();
                          ?>
-                         <tr class="table-light">
+                         <tr class=" <?php if($row['dateRdv']> date('m-d-Y')){echo "bg-danger";}else{echo "bg-info";} ?>">
 
                              <td><?php echo $exePF['nom'];?></td>
                              <td><?php echo $exePF['prenom'];?></td>

@@ -21,13 +21,16 @@ function ajout()
     $idP = $_POST['pat'];
     $drdv = $_POST['drdv'];
     $hrdv = $_POST['horaire'];
+    $timestamp = strtotime($hrdv);
+    $newTime = date("h:i", $timestamp );
+    $hrdv= $newTime;
     $duree = $_POST['duree'];
-    $sql = "INSERT INTO `consulter`(`id_patient`, `dateRdv`, `heureRdv`, `Id_Medecin`, `duree`) VALUES ('$idP','$drdv','$hrdv','$idM','$duree')";
+    $sql = "INSERT INTO `consulter`(`id_patient`, `dateRdv`, `heureRdv`, `Id_Medecin`, `duree`) VALUES ('$idP','$drdv','7:00','$idM','$duree')";
     $conn->exec($sql);
 
 }
 
-if(isset($_POST['valider']) and isset($_POST['drdv']) and isset($_POST['pat']) and isset($_POST['horaire']) and isset($_POST['duree'])) {
+if(isset($_POST['valider']) ) {
 
     ajout();
     header("Location: ..\..\PhpGitCM\\rdv\afficherRdv.php");
