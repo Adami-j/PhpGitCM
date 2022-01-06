@@ -51,7 +51,7 @@
       <workItem from="1641332806489" duration="4000" />
       <workItem from="1641332821386" duration="6000" />
       <workItem from="1641332906238" duration="28000" />
-      <workItem from="1641486111260" duration="1945000" />
+      <workItem from="1641486111260" duration="3307000" />
     </task>
     <task id="LOCAL-00001" summary="menu ajout patient et aptient">
       <created>1640888007689</created>
@@ -207,7 +207,14 @@
       <option name="project" value="LOCAL" />
       <updated>1641489407867</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="test heroku connect">
+      <created>1641489946051</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1641489946051</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
