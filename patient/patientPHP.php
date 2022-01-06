@@ -20,12 +20,17 @@ if(isset($_POST['valider']) ){
             and !empty($_POST['adresse']) and !empty($_POST['dNaissance']) and !empty($_POST['ville'])
             and !empty($_POST['cp']) and !empty($_POST['dNaissance']) and !empty($_POST['lNaissance']) and !empty($_POST['tel'])){
 
-            $requette= "INSERT INTO patient(NumeroSecu,nom,prenom,telephone,adresse,ville,codePostal,dateNaissance,lieuNaissance,civilite) VALUES('$numSecu','$nom','$prenom','$telephone','$adresse','$ville','$codePostal','$dNaissance','$lieuNaissance','$civilite');";
-            $conn->exec($requette);
+            $check = $conn->query("SELECT count(*) as nb from patient where patient.NumeroSecu = '".$_POST['numSecu']."' ");
+            $doubleSecu = $check->fetch();
+            if($doubleSecu['nb'] != 0){
+                echo "Un patient utilise déjà ce numéro de sécurité sociale.";
+            }else{
+                $requette= "INSERT INTO patient(NumeroSecu,nom,prenom,telephone,adresse,ville,codePostal,dateNaissance,lieuNaissance,civilite) VALUES('$numSecu','$nom','$prenom','$telephone','$adresse','$ville','$codePostal','$dNaissance','$lieuNaissance','$civilite');";
+                $conn->exec($requette);
 
-            echo "<meta http-equiv='refresh' content='0'>";
-            header("Location: patient.php");
-
+                echo "<meta http-equiv='refresh' content='0'>";
+                header("Location: patient.php");
+            }
 
         }
     }
