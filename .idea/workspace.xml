@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="a06d0145-ada9-4a86-8950-66e466b9df7c" name="Changes" comment="test heroku connect">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/connect.php" beforeDir="false" afterPath="$PROJECT_DIR$/connect.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rdv/ajouterRdv1.php" beforeDir="false" afterPath="$PROJECT_DIR$/rdv/ajouterRdv1.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rdv/modifierRdv.php" beforeDir="false" afterPath="$PROJECT_DIR$/rdv/modifierRdv.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stats/stats.php" beforeDir="false" afterPath="$PROJECT_DIR$/stats/stats.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +53,7 @@
       <workItem from="1641332806489" duration="4000" />
       <workItem from="1641332821386" duration="6000" />
       <workItem from="1641332906238" duration="28000" />
-      <workItem from="1641486111260" duration="3307000" />
+      <workItem from="1641486111260" duration="4312000" />
     </task>
     <task id="LOCAL-00001" summary="menu ajout patient et aptient">
       <created>1640888007689</created>
@@ -214,7 +216,14 @@
       <option name="project" value="LOCAL" />
       <updated>1641489946051</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="test heroku connect">
+      <created>1641491846427</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1641491846427</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

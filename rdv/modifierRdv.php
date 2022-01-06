@@ -8,7 +8,7 @@
     <?php
     require "..\..\PhpGitCM\secu\secuConnexion.php";
     require "..\..\PhpGitCM\connect.php";
-
+    require "..\..\PhpGitCM\menu.php";
     date_default_timezone_set('Europe/Paris');
 
     if(isset($_POST['valider'])) {
@@ -23,70 +23,105 @@
         var_dump($sql);
     }
 
+    $rechercheRdv = "SELECT * from consulter where  ";
     ?>
 
 
 
 
 </head>
-<body><form method="POST">
-    <input type="date" id="start" name="drdv" value= min="2018-01-01" max="2018-12-31">
-
-    <select name="horaire">
-        <?php  $i=7;
-        while($i<20){?>
-            <option value="<?php echo $i;?>:00"><?php echo $i;?>:00</option>
-            <option value="<?php echo $i;?>:30"><?php echo $i;?>:30</option>
-            <?php $i=$i+1; }?>
-    </select>
+<body>
 
 
 
-    <select name="id_Medecin">
-        <?php
+<div class="needs-validation" novalidate>
 
-        $donneesM=$conn->query("SELECT nom, prenom , id_Medecin FROM medecin");
-        while ($exec = $donneesM->fetch() ){
+    <form action=""  method="POST" >
+        <div class="row">
 
-            ?>
-            <option value="<?php echo $exec['id_Medecin']?>">
-                <?php echo $exec['nom']." ".$exec['prenom']?>
-            </option>
-            <?php
-        }
-        ?>
-    </select>
+            <div class="form-group col-md-3 mb-3">
 
-    <select name="duree">
-        <option value="10">
-            10
-        </option>
-        <option value="20">
-            20
-        </option>
-        <option value="30">
-            30
-        </option>
-    </select>
+                <label for="drdv">Date du rdv</label>
 
+                <input class="form-select" type="date" id="start" name="drdv" value="" min="<?php date('m-d-Y');?>">
 
-    <select name="pat">
-        <?php
-        $donneesP=$conn->query("SELECT nom, prenom, id_patient FROM patient");
-        while ($execP = $donneesP->fetch() ){
+            </div>
 
-            ?>
-            <option value="<?php echo $execP['id_patient']?>">
-                <?php echo $execP['nom']." ".$execP['prenom']?>
-            </option>
-            <?php
-        }
+            <div class="col-md-3 mb-3 ">
+                <label for="hrdf">heure du rdv</label>
+                <select class="form-select" name="horaire" default="">
+                    <?php  $i=7;
+                    while($i<20){?>
+                        <option value="<?php echo $i;?>:00"><?php echo $i;?>:00</option>
+                        <option value="<?php echo $i;?>:30"><?php echo $i;?>:30</option>
+                        <?php $i=$i+1; }?>
+                </select>
 
-        ?>
-    </select>
+            </div>
+            <div class="col-md-3 mb-3 ">
+                <label for="duree">durée du rdv</label>
+                <select name="duree" class="form-select">
+                    <option value="00:10:00">
+                        10
+                    </option>
+                    <option value="00:20:00">
+                        20
+                    </option>
+                    <option value="00:30:00">
+                        30
+                    </option>
+                </select>
 
 
-    <input type="submit" id="valider" name="valider">
-</form>
+
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="prenom">Médecin</label>
+                <select class="form-select" name="id_Medecin">
+                    <?php
+
+                    $donneesM=$conn->query("SELECT nom, prenom , id_Medecin FROM medecin");
+                    while ($exec = $donneesM->fetch() ){
+
+                        ?>
+                        <option value="<?php echo $exec['id_Medecin']?>">
+                            <?php echo $exec['nom']." ".$exec['prenom']?>
+                        </option>
+                        <?php
+                    }
+                    ?>
+                </select>
+
+
+            </div>
+
+            <div class="col-md-6 mb-3">
+                <label for="prenom">Patient</label>
+                <select class="form-select" name="patient">
+                    <?php
+                    $donneesP=$conn->query("SELECT nom, prenom, id_patient FROM patient");
+                    while ($execP = $donneesP->fetch() ){
+
+                        ?>
+                        <option value="<?php echo $execP['id_patient']?>">
+                            <?php echo $execP['nom']." ".$execP['prenom']?>
+                        </option>
+                        <?php
+                    }
+
+                    ?>
+                </select>
+
+            </div>
+
+
+            <div class="form-group ">
+                <input type="submit"  id="envoi" class="btn btn-outline-success" name="valider" value="Envoyer">
+                <input type="submit" id="retour" class="btn btn-outline-danger" name="retour" value="Retour" >
+
+
+            </div>
+        </div>
+    </form>
 </body>
 </html>

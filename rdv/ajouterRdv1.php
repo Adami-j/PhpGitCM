@@ -54,13 +54,6 @@ if (isset($_POST['retour'])) {
 <body>
 <form method="POST">
 
-
-
-
-
-
-
-
 	</form>
 
 <div class="needs-validation" novalidate>
