@@ -2,9 +2,9 @@
 <?php
 	
 		$host = 'eu-cdbr-west-02.cleardb.net';
-		$dbname = 'heroku_63a728956f073da';
-		$username = 'bcc4290f9e5441';
-		$password = 'eeb12110 ';
+		$dbname = 'heroku_c8785add61c284f';
+		$username = 'bf80eca2238c6a';
+		$password = '1139321a ';
 
 	  try {
 		
