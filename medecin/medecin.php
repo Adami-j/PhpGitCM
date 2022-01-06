@@ -40,7 +40,6 @@ if(isset($_POST['ajout'])){
                     <table class="table table-striped table-bordered">
                         <thead class="text-center table-dark">
                         <tr>
-                            <th scope="col">id</th>
                             <th scope="col">Civilité</th>
                             <th scope="col">Nom</th>
                             <th scope="col">Prénom</th>
@@ -59,7 +58,6 @@ if(isset($_POST['ajout'])){
 
                         ?>
                         <tr class="table-light">
-                            <th scope=row><?php echo $exec['id_Medecin'];?> </th>
                             <td><?php echo $exec['civilite'];?></td>
                             <td><?php echo $exec['nom'];?></td>
                             <td><?php echo $exec['prenom'];?></td>
