@@ -30,7 +30,7 @@ function ajout()
 
 }
 
-if(isset($_POST['valider']) and isset($_POST['drdv']) and isset($_POST['patient']) and isset($_POST['horaire']) and isset($_POST['duree'])) {
+if(isset($_POST['valider']) and isset($_POST['drdv']) ) {
 
     $check = $conn->query("SELECT count(*) as nb from consulter where consulter.Id_Medecin = '".$_POST['id_Medecin']."' AND consulter.dateRdv = '".$_POST['drdv']."' AND consulter.heureRdv = '".$_POST['horaire']."' ");
     $rdvpris = $check->fetch();
