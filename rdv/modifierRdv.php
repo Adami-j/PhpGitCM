@@ -11,6 +11,12 @@
     require "..\..\PhpGitCM\menu.php";
     date_default_timezone_set('Europe/Paris');
 
+    if(isset($_GET['dateRdv']) and isset($_GET['idp']) and isset($_GET['heureRdv']) ){
+
+    }else{
+        header("Location: ..\..\PhpGitCM\\rdv\afficherRdv.php");
+    }
+
     if(isset($_POST['valider'])) {
         # and isset($_POST['id_Medecin']) and  isset($_POST['id_patient']) and  isset($_POST['drdv']) and  isset($_POST['horaire'])
         $idM = $_POST['id_Medecin'];
@@ -20,10 +26,14 @@
         $duree = $_POST['duree'];
         $sql = "INSERT INTO `consulter`(`id_patient`, `dateRdv`, `heureRdv`, `Id_Medecin`, `duree`) VALUES ('$idP','$drdv','$hrdv','$idM','$duree')";
         $conn->exec($sql);
-        var_dump($sql);
+        header("Location : afficherRdv.php");
     }
 
-    $rechercheRdv = "SELECT * from consulter where  ";
+    if (isset($_POST['retour'])) {
+        header("Location: ..\..\PhpGitCM\\rdv\afficherRdv.php");
+    }
+
+    $afficherRdv= "SELECT * from consulter WHERE $";
     ?>
 
 
@@ -62,13 +72,13 @@
                 <label for="duree">durée du rdv</label>
                 <select name="duree" class="form-select">
                     <option value="00:10:00">
-                        10
+                        10 minutes
                     </option>
                     <option value="00:20:00">
-                        20
+                        20 minutes
                     </option>
                     <option value="00:30:00">
-                        30
+                        30 minutes
                     </option>
                 </select>
 

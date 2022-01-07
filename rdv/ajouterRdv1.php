@@ -84,13 +84,13 @@ if (isset($_POST['retour'])) {
                 <label for="duree">durée du rdv</label>
                 <select name="duree" class="form-select">
                     <option value="00:10:00">
-                        10
+                        10 minutes
                     </option>
                     <option value="00:20:00">
-                        20
+                        20 minutes
                     </option>
                     <option value="00:30:00">
-                        30
+                        30 minutes
                     </option>
                 </select>
 
