@@ -35,11 +35,10 @@
 </form>
 
 	<?php 
-			
-	if(isset($_POST['envoi'])){ 		
-		if( !empty($_POST['selectCivilite']) and !empty($_POST['nom'])and !empty($_POST['prenom']) 
-			and !empty($_POST['adresse']) and !empty($_POST['dNaissance']) and !empty($_POST['ville'])
-			and !empty($_POST['cp']) and !empty($_POST['dNaissance']) and !empty($_POST['lNaissance']) and !empty($_POST['tel'])){
+if(isset($_POST['envoi']) ){	
+	if( !empty($_POST['selectCivilite']) and !empty($_POST['nom'])and !empty($_POST['prenom'])
+            and !empty($_POST['adresse']) and !empty($_POST['dNaissance']) and !empty($_POST['ville'])
+            and !empty($_POST['cp']) and !empty($_POST['dNaissance']) and !empty($_POST['lNaissance']) and !empty($_POST['tel']) and !empty($_POST['numSecu'])) {
 	
 			
 					$nom = $_POST['nom'];
@@ -52,15 +51,23 @@
 					$telephone=$_POST['tel'];
 					$numSecu=$_POST['numSecu'];
 					$civilite=$_POST['selectCivilite'];
-					$requette= "UPDATE patient SET numeroSecu ='$numSecu',nom='$nom',prenom='$prenom',telephone='$telephone',adresse='$adresse',ville='$ville',codePostal='$codePostal',dateNaissance='$dNaissance',lieuNaissance='$lieuNaissance',civilite='$civilite' WHERE id_patient= $id";
-					$conn->exec($requette);
-					
+                    $check = $conn->query("SELECT count(*) as nb from patient where patient.NumeroSecu = '".$_POST['numSecu']."' and patient.id_patient != $id ");
+                $doubleSecu = $check->fetch();
+                if($doubleSecu['nb'] >= 1){
+                echo "<script>alert(\"Un patient utilise déjà ce numéro de sécurité sociale.\")</script>";
+            }else{
+                $requette= "UPDATE patient SET numeroSecu ='$numSecu',nom='$nom',prenom='$prenom',telephone='$telephone',adresse='$adresse',ville='$ville',codePostal='$codePostal',dateNaissance='$dNaissance',lieuNaissance='$lieuNaissance',civilite='$civilite' WHERE id_patient= $id";
+                $conn->exec($requette);
 
-					header('Location:patient.php');
-				
-				
-			}
-	}
+                echo "<meta http-equiv='refresh' content='0'>";
+                header("Location: patient.php");
+            }
+
+        }else{
+            echo "<script>alert(\"Veuillez remplir tous les champs prévus pour la création du patient.\")</script>";
+        }
+}
+			
 	if(isset($_POST['retour'])){
 		header('Location:patient.php');
 	}
