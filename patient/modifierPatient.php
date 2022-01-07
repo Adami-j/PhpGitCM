@@ -64,7 +64,7 @@ if(isset($_POST['envoi']) ){
             }
 
         }else{
-            echo "<script>alert(\"Veuillez remplir tous les champs prévus pour la création du patient.\")</script>";
+            echo "<script>alert(\"Veuillez remplir tous les champs prévus pour la modification du patient.\")</script>";
         }
 }
 			
