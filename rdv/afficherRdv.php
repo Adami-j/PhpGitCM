@@ -64,6 +64,8 @@ date_default_timezone_set('Europe/Paris');?>
                              $sqlM = "SELECT id_Medecin, nom, prenom FROM medecin WHERE id_Medecin = ".$row['id_Medecin']."";
                              $exeM = $conn->query($sqlM);
                              $exeMF = $exeM->fetch();
+
+
                          ?>
                          <tr class=" <?php if($row['dateRdv']> date('m-d-Y')){echo "bg-danger";}else{echo "bg-info";} ?>">
 

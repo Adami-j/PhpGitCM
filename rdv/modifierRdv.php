@@ -12,6 +12,17 @@
     date_default_timezone_set('Europe/Paris');
 
     if(isset($_GET['dateRdv']) and isset($_GET['idp']) and isset($_GET['heureRdv']) ){
+        $drdv = $_GET['dateRdv'];
+        $idP =$_GET['idp'];
+        $hrdv = $_GET['heureRdv'];
+
+
+        $sql= "SELECT id_patient, dateRdv, HeureRdv, id_Medecin, duree from consulter where id_patient = $idP AND dateRdv = $drdv  ;";
+
+        $req = $conn ->query($sql);
+        $row= $req ->fetch();
+
+
 
     }else{
         header("Location: ..\..\PhpGitCM\\rdv\afficherRdv.php");
@@ -33,7 +44,10 @@
         header("Location: ..\..\PhpGitCM\\rdv\afficherRdv.php");
     }
 
-    $afficherRdv= "SELECT * from consulter WHERE $";
+
+
+
+
     ?>
 
 
@@ -41,7 +55,6 @@
 
 </head>
 <body>
-
 
 
 <div class="needs-validation" novalidate>
@@ -53,13 +66,13 @@
 
                 <label for="drdv">Date du rdv</label>
 
-                <input class="form-select" type="date" id="start" name="drdv" value="" min="<?php date('m-d-Y');?>">
+                <input class="form-select" type="date" id="start" name="drdv" value="<?php echo"".$row['dateRdv'].""; ?>" min="<?php date('m-d-Y');?>">
 
             </div>
 
             <div class="col-md-3 mb-3 ">
                 <label for="hrdf">heure du rdv</label>
-                <select class="form-select" name="horaire" default="">
+                <select class="form-select" name="horaire" value="<?php echo"".$row['heureRdv'].""; ?>">
                     <?php  $i=7;
                     while($i<20){?>
                         <option value="<?php echo $i;?>:00"><?php echo $i;?>:00</option>
@@ -70,7 +83,7 @@
             </div>
             <div class="col-md-3 mb-3 ">
                 <label for="duree">durée du rdv</label>
-                <select name="duree" class="form-select">
+                <select name="duree" class="form-select" value="<?php echo"".$row['duree'].""; ?>">
                     <option value="00:10:00">
                         10 minutes
                     </option>
