@@ -32,14 +32,16 @@ if(isset($_POST['valider']) ){
 					header('Location:medecin.php');
 					
 				}else{
-					$errorMessage = 'Ce médecin existe déjà';
+					echo "<script>alert(\"Ce médecin existe déjà.\")</script>";
 				}
-			}
+			}else{
+			echo "<script>alert(\"Veuillez remplir tous les champs prévus pour la création du médecin.\")</script>";
 		}
+	}
 }
 
 if (isset($_POST['retour'])) {
-    header(' Location: medecin.php');
+    header('Location:medecin.php');
 }
 
 ?>

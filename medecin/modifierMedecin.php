@@ -88,7 +88,10 @@
                                 $conn->exec($requette);
 
                                 header('Location:medecin.php');
+                            }else{
+                                echo "<script>alert(\"Veuillez remplir tous les champs prévus pour la modification du médecin.\")</script>";
                             }
+
                         }
                         if(isset($_POST['retour'])){
                             header('Location: medecin.php');
