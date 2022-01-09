@@ -1,17 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a06d0145-ada9-4a86-8950-66e466b9df7c" name="Changes" comment="rdv">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adminGestion.php" beforeDir="false" afterPath="$PROJECT_DIR$/adminGestion.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/medecin/ajoutMedecin.php" beforeDir="false" afterPath="$PROJECT_DIR$/medecin/ajoutMedecin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/menu.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/patient/ajoutPatient.php" beforeDir="false" afterPath="$PROJECT_DIR$/patient/ajoutPatient.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/patient/mdrf.php" beforeDir="false" afterPath="$PROJECT_DIR$/patient/mdrf.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/patient/modifierPatient.php" beforeDir="false" afterPath="$PROJECT_DIR$/patient/modifierPatient.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rdv/afficherRdv.php" beforeDir="false" afterPath="$PROJECT_DIR$/rdv/afficherRdv.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rdv/ajouterRdv1.php" beforeDir="false" afterPath="$PROJECT_DIR$/rdv/ajouterRdv1.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rdv/modifierRdv.php" beforeDir="false" afterPath="$PROJECT_DIR$/rdv/modifierRdv.php" afterDir="false" />
+    <list default="true" id="a06d0145-ada9-4a86-8950-66e466b9df7c" name="Changes" comment="modif style">
+      <change beforePath="$PROJECT_DIR$/sql.sql" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +52,7 @@
       <workItem from="1641332906238" duration="28000" />
       <workItem from="1641486111260" duration="5056000" />
       <workItem from="1641498743699" duration="6636000" />
-      <workItem from="1641731051248" duration="4041000" />
+      <workItem from="1641731051248" duration="4681000" />
     </task>
     <task id="LOCAL-00001" summary="menu ajout patient et aptient">
       <created>1640888007689</created>
@@ -266,7 +257,14 @@
       <option name="project" value="LOCAL" />
       <updated>1641578662352</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="modif style">
+      <created>1641736689189</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1641736689189</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -294,6 +292,7 @@
     <MESSAGE value="conect" />
     <MESSAGE value="test heroku connect" />
     <MESSAGE value="rdv" />
-    <option name="LAST_COMMIT_MESSAGE" value="rdv" />
+    <MESSAGE value="modif style" />
+    <option name="LAST_COMMIT_MESSAGE" value="modif style" />
   </component>
 </project>
