@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a06d0145-ada9-4a86-8950-66e466b9df7c" name="Changes" comment="modif style">
-      <change beforePath="$PROJECT_DIR$/sql.sql" beforeDir="false" />
-    </list>
+    <list default="true" id="a06d0145-ada9-4a86-8950-66e466b9df7c" name="Changes" comment="sqlsp" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -52,7 +50,7 @@
       <workItem from="1641332906238" duration="28000" />
       <workItem from="1641486111260" duration="5056000" />
       <workItem from="1641498743699" duration="6636000" />
-      <workItem from="1641731051248" duration="4681000" />
+      <workItem from="1641731051248" duration="5175000" />
     </task>
     <task id="LOCAL-00001" summary="menu ajout patient et aptient">
       <created>1640888007689</created>
@@ -264,7 +262,14 @@
       <option name="project" value="LOCAL" />
       <updated>1641736689189</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="sqlsp">
+      <created>1641737309426</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1641737309426</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -293,6 +298,7 @@
     <MESSAGE value="test heroku connect" />
     <MESSAGE value="rdv" />
     <MESSAGE value="modif style" />
-    <option name="LAST_COMMIT_MESSAGE" value="modif style" />
+    <MESSAGE value="sqlsp" />
+    <option name="LAST_COMMIT_MESSAGE" value="sqlsp" />
   </component>
 </project>

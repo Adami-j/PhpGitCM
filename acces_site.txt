@@ -1,0 +1,11 @@
+******************************************************
+Pour accéder au site : https://gitcm.herokuapp.com/  *
+						     *
+Infos de connexion : User = root Password = root     *
+******************************************************
+Hébergé sur heroku : heroku.com		             *
+						     *
+Base de données ClearDB MySql			     *
+						     *
+CLient Db : MysqlWorkbench			     *
+******************************************************
