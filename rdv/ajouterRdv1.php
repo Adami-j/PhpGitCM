@@ -7,9 +7,10 @@
   <link rel="stylesheet" href="style.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 <?php
-
+    require "..\..\PhpGitCM\menu.php";
 	require "..\..\PhpGitCM\secu\secuConnexion.php";
     require "..\..\PhpGitCM\connect.php";
+require "../../PhpGitCM/style.html";
 	
 	date_default_timezone_set('Europe/Paris');
 
@@ -18,14 +19,14 @@ function ajout()
 
     require "..\..\PhpGitCM\connect.php";
     $idM = $_POST['id_Medecin'];
-    $idP = $_POST['pat'];
+    $idP = $_POST['patient'];
     $drdv = $_POST['drdv'];
     $hrdv = $_POST['horaire'];
     $timestamp = strtotime($hrdv);
     $newTime = date("h:i", $timestamp );
     $hrdv= $newTime;
     $duree = $_POST['duree'];
-    $sql = "INSERT INTO `consulter`(`id_patient`, `dateRdv`, `heureRdv`, `Id_Medecin`, `duree`) VALUES ('$idP','$drdv','7:00','$idM','$duree')";
+    $sql = "INSERT INTO `consulter`(`id_patient`, `dateRdv`, `heureRdv`, `Id_Medecin`, `duree`) VALUES ('$idP','$drdv','$hrdv','$idM','$duree')";
     $conn->exec($sql);
 
 }
@@ -39,7 +40,7 @@ if(isset($_POST['valider']) and isset($_POST['drdv']) ) {
     }
     else {
       ajout();
-    header("Location: ..\..\PhpGitCM\\rdv\afficherRdv.php");
+      header("Location: ..\..\PhpGitCM\\rdv\afficherRdv.php");
 
     }
 }
@@ -52,10 +53,9 @@ if (isset($_POST['retour'])) {
 
 </head>
 <body>
-<form method="POST">
 
-	</form>
-
+<h3 class="page-header text-center apie_m_cga " style="color: white">Ajouter un rdv</h3>
+<hr>
 <div class="needs-validation" novalidate>
 
     <form action=""  method="POST" >

@@ -8,6 +8,8 @@
 
 
 </head>
+
+
 <?php
 
 require "secu/secuConnexion.php";
@@ -18,5 +20,8 @@ require "menu.php";
 <body>
 <?php require "style.html";?>
 
+
 </body>
+
+
 </html>

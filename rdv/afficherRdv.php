@@ -9,7 +9,8 @@ if(isset($_POST['ajout'])){
 }
 ?>
 <?php
-require "..\..\PhpGitCM\menu.php";?>
+require "..\..\PhpGitCM\menu.php";
+?>
 
 <!doctype html>
 <html lang="fr">
@@ -67,7 +68,7 @@ date_default_timezone_set('Europe/Paris');?>
 
 
                          ?>
-                         <tr class=" <?php if($row['dateRdv']> date('m-d-Y')){echo "bg-danger";}else{echo "bg-info";} ?>">
+                         <tr class="bg-light">
 
                              <td><?php echo $exePF['nom'];?></td>
                              <td><?php echo $exePF['prenom'];?></td>
